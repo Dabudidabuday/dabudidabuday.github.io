@@ -1,0 +1,75 @@
+.description {
+  padding-top: 30px;
+  padding-bottom: 70px;
+  background-color: $bgDarken;
+}
+
+.desctiption__text {
+  padding-left: 70px;
+
+  .title {
+    margin-top: 55px;
+    margin-bottom: 33px;
+  }
+}
+
+.description-definition {
+  line-height: 34px;
+  max-width: 700px;
+  width: 100%;
+}
+
+
+.title-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.consultation {
+  margin-bottom: 130px;
+}
+
+.discount {
+  text-align: center;
+
+  .title {
+    margin-bottom: 15px;
+  }
+}
+
+.discount__subtitle {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: $accentColor;
+}
+
+.discount__description {
+  margin-bottom: 35px;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.price {
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #00A3DA;
+}
+
+.note {
+  margin-bottom: 15px;
+  color: #686868;
+}

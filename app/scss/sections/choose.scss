@@ -1,0 +1,42 @@
+/*
+**  CHOOSE US
+*/
+
+.choose {
+  background-color: $bgDarken;
+  height: 600px;
+}
+
+.choose__title {
+  // margin-top: 258px;
+  flex-basis: 45%;
+}
+
+.choose__bullets {
+  flex-basis: 55%;
+}
+
+.choose__bullets-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  .item {
+    margin-bottom: 40px;
+    flex-basis: 30%;
+    text-align: center;
+  }
+
+  .item:nth-child(3) {
+    margin-left: 50px;
+    transform: translateY(70px);
+  }
+
+  .item__title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 27px;
+  }
+}

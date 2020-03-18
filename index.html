@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="app/scss/libraries/slick.css" />
+    <link rel="stylesheet" type="text/css" href="app/scss/libraries/slick-theme.css" />
+    <link rel="stylesheet" href="dist/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="undisplay" id="overlay"></div>
+    <header class="header">
+        <div class="header-container">
+            <div class="header__logo">
+                <img src="assets/images/header-logo.png" alt="" class="header__logo-img">
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="item">
+                        <a href="#" class="item-link">Акційна пропозиція</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">Обладнання</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">Обладнання</a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" class="item-link">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__utility">
+                <div class="header__utility--lang">
+                    <div class="header__utility-lang-img">
+                        <img src="assets/icons/lang.svg" alt="" class="icon">
+                    </div>
+                    <p class="lang">РУС</p>
+                </div>
+
+                <div class="header__utility--phone">
+                    <a href="#"><img src="assets/icons/phone.svg" alt="" class="icon"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__burger">
+            <div class="line line--first"></div>
+            <div class="line line--second"></div>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="intro__text">
+            <h1 class="title intro__title">Касове обладнання</h1>
+            <p class="intro__subtitle">для всіх платників єдиного податку ІІ – IV груп</p>
+            <button class="btn btn--intro">Безкоштовна консультація</button>
+
+            <button class="play"><img class="triangle" src="assets/icons/triangle.svg" alt=""></button>
+        </div>
+
+        <div class="intro__background">
+            <img src="assets/images/intro-background.png" alt="">
+        </div>
+
+        <div class="circle circle-little">
+        </div>
+
+        <div class="circle circle-big">
+        </div>
+
+    </section>
+
+    <section class="about">
+        <div class="flex-container jc-space-around">
+            <div class="about__text">
+                <h3 class="about__title">ПРО ЗАКОН</h3>
+
+                <p class="about__description">
+                    У зв’язку з прийняттям Закону 129-IX (зміни до Закону про РРО) та Змінами у
+                    Податковому кодексі України, з’являються
+                    нові категорії підприємців, які працюють як ФОП на єдиному податку, що будуть зобов'язані
+                    використовувати РРО у
+                    2020-2021 рр.
+                </p>
+
+                <a href="#" class="about__more">посилання на джерело</a>
+            </div>
+
+            <div class="about__background">
+                <img src="assets/images/about-background.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="choose">
+        <div class="flex-container ai-center jc-space-between full-height full-width">
+            <div class="choose__title">
+                <h3 class="title">Чому потрібно звернутись саме до нас?</h3>
+            </div>
+
+            <div class="choose__bullets">
+                <ul class="choose__bullets-list">
+                    <li class="item">
+                        <img src="assets/icons/bullets/icon-speed.svg" alt="">
+                        <p class="item__title">Швидко</p>
+                        <p class="item__description">
+                            Реєстрація РРО
+                            за 1 годину
+                        </p>
+                    </li>
+
+                    <li class="item">
+                        <img src="assets/icons/bullets/icon-good.svg" alt="">
+                        <p class="item__title">Зручно</p>
+                        <p class="item__description">
+                            Готовий до
+                            реєстрації
+                        </p>
+                    </li>
+
+                    <li class="item">
+                        <img src="assets/icons/bullets/icon-info.svg" alt="">
+                        <p class="item__title">Інформаційна
+                            підтримка</p>
+                    </li>
+
+                    <li class="item">
+                        <img src="assets/icons/bullets/icon-money.svg" alt="">
+                        <p class="item__title">Доступно</p>
+                        <p class="item__description">
+                            Вигідна ціна
+                        </p>
+                    </li>
+
+                    <li class="item">
+                        <img src="assets/icons/bullets/icon-settings.svg" alt="">
+                        <p class="item__title">Сервіс</p>
+                        <p class="item__description">
+                            Національне покриття
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="news">
+        <h5 class="container">
+            <div class="news__title">
+                <h3 class="title">Нові категорії ФОП, які зобов'язані <br> використовувати РРО</h3>
+            </div>
+
+            <article class="article">
+                <div class="article-wrapper">
+                    <h5 class="article-title">До 1 жовтня 2020 р.</h5>
+                    <div class="article-subtitle">
+                        Платники єдиного податку, ФОП другої - четвертої груп з 19 квітня 2020 р. мають можливість
+                        ввести в експлуатацію РРО та
+                        в обов’язковому порядку мають почати застосування до 1 жовтня 2020 р.!
+                    </div>
+                    <p class="article-description">
+                        у яких обсяг доходу перевищує 1 мільйон гривень протягом календарного року
+                        та ФОП другої - четвертої груп, які здійснюють:
+                    </p>
+                    <ul class="article__bullet-list">
+                        <li class="item">
+                            <p class="item-text">
+                                реалізацію технічно складних побутових товарів, що підлягають гарантійному ремонту
+                            </p>
+                        </li>
+
+                        <li class="item">
+                            <p class="item-text">
+                                реалізацію лікарських засобів, виробів медичного призначення та надання платних послуг у
+                                сфері охорони здоров’я </p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="article">
+                <ul class="article-wrapper">
+                    <h5 class="article-title">З 1 Жовтня</h5>
+
+                    <div class="article-subtitle">
+                        Платники єдиного податку, ФОП другої - четвертої груп з 19 квітня 2020 р. мають можливість
+                        ввести в експлуатацію РРО та
+                        в обов’язковому порядку мають почати застосування до 1 січня 2021 р.!
+
+                    </div>
+
+                    <div class="article-description">
+                        у яких обсяг доходу перевищує 1 мільйон гривень протягом календарного року
+                        та ФОП другої - четвертої груп, які здійснюють:
+
+                    </div>
+
+                    <ul class="article__bullet-list">
+                        <li class="item">
+                            <p class="item-text">
+                                реалізацію технічно складних побутових товарів, що підлягають гарантійному ремонту
+                            </p>
+                        </li>
+
+                        <li class="item">
+                            <p class="item-text">
+                                реалізацію лікарських засобів, виробів медичного призначення та надання платних послуг у
+                                сфері охорони здоров’я
+                            </p>
+                        </li>
+                    </ul>
+
+                    <h5 class="article-title article-title--second">
+                        До них додаються
+                    </h5>
+
+                    <div class="article__two-column">
+                        <ul class="article__bullet-list">
+                            <li class="item">
+                                <p class="item-text">
+                                    реалізацію товарів чи послуг в інтернеті
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    реалізацію ювелірних та побутових виробів з дорогоцінних металів, дорогоцінного
+                                    каміння - органогенного утворення та
+                                    напівдорогоцінного каміння
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    діяльність ресторанів, кафе, ресторанів швидкого харчування (окрім продажу води,
+                                    молока, квасу, масла, живої риби з
+                                    автоцистерн, цистерн, бочок та бідонів; страв і безалкогольних напоїв у їдяльнях та
+                                    буфетах загальноосвітніхнавчальних
+                                    закладах та професійно-технічних навчальних закладах під час освітнього процесу
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul class="article__bullet-list">
+                            <li class="item">
+                                <p class="item-text">
+                                    роздрібну торгівлю вживаними товарами у магазинах (група 47,79 КВЕД)
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    діяльність туристичних агентств, туроператорів
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    діяльність готелів та інших засобів тимчасового розміщення (група 55.10 КВЕД)
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    реалізацію текстилю (окрім реалізації за готівку на ринках), деталей та приладів для
+                                    автотранспортних засобів,
+                                    відповідно до переліку, затвердженого Кабінетом Міністрів України
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+            </article>
+            </div>
+    </section>
+
+    <section class="description">
+        <div class="flex-container">
+            <div class="desctiption__text">
+                <h5 class="title">Що таке РРО?</h5>
+                <p class="description-definition">
+                    Реєстратор розрахункових операцій (РРО) - пристрій або програмно-технічний комплекс, в якому
+                    реалізовані фіскальні функції і який призначений для реєстрації розрахункових операцій при продажу
+                    товарів (наданні послуг), операцій з купівлі-продажу іноземної валюти та/або реєстрації кількості
+                    проданих товарів (наданих послуг). Він використовується при реалізації товарів і послуг за готівкові
+                    кошти.
+                </p>
+            </div>
+
+            <div class="description__background">
+                <img src="assets/images/description-bg.png" alt="">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="title--little">
+                <h5 class="title-tooltip">
+                    До реєстраторів розрахункових операцій відносяться:
+                    <span class="tooltip"><img src="assets/icons/tooltip.svg" alt=""></span>
+                </h5>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="article__three-column">
+                <ul class="article__bullet-list">
+                    <li class="item">
+                        <p class="item-text">
+                            електронний контрольно-касовий апарат
+                            (ЕККА/контрольно-касовий апарат)
+
+                        </p>
+                    </li>
+
+                    <li class="item">
+                        <p class="item-text">
+                            електронний контрольно-касовий реєстратор
+                            (ЕККР/фіскальний реєстратор) </p>
+                    </li>
+                </ul>
+
+                <ul class="article__bullet-list">
+                    <li class="item">
+                        <p class="item-text">
+                            комп'ютерно-касова система (ККС)
+                        </p>
+                    </li>
+
+                    <li class="item">
+                        <p class="item-text">
+                            електронний таксометр (ЕТ)
+                        </p>
+                    </li>
+                </ul>
+
+                <ul class="article__bullet-list">
+                    <li class="item">
+                        <p class="item-text">
+                            автомат для продажу товарів (послуг) (АТ) і т.п.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <article class="article">
+                <div class="article-wrapper article-wrapper--wide">
+                    <h5 class="article-title">З 19 квітня 2020</h5>
+                    <p class="article-subtitle">
+                        мають можливість запровадити РРО ФОПи з доходом до 1 млн грн які займаються такою діяльністю:
+                    </p>
+
+                    <div class="article__four-column">
+                        <ul class="article__bullet-list">
+                            <li class="item">
+                                <p class="item-text">
+                                    продають товари чи послуги в інтернеті
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    торгують складною технікою
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    пункти обміну валют, АЗС
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul class="article__bullet-list">
+                            <li class="item">
+                                <p class="item-text">
+                                    торгують лікарськими засобами
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    торгують ювелірними виробами
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    торгують уживаними товарами
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul class="article__bullet-list">
+                            <li class="item">
+                                <p class="item-text">
+                                    працюють у сфері громадського харчування
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    надають туристичні послуги
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul class="article__bullet-list">
+                            <li class="item">
+                                <p class="item-text">
+                                    надають готельні послуги
+                                </p>
+                            </li>
+
+                            <li class="item">
+                                <p class="item-text">
+                                    торгують запчастинами до авто
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div class="consultation">
+        <div class="flex-container jc-space-around">
+            <h3 class="title">
+                Замовте безкоштовну консультацію з <br> питань придбання РРО
+            </h3>
+
+            <button class="btn">Отримати консультацію</button>
+        </div>
+    </div>
+
+    <div class="discount">
+        <div class="container">
+            <article class="article">
+                <div class="article-wrapper">
+                    <h5 class="title">Акційна пропозиція</h5>
+
+                    <p class="discount__subtitle">
+                        до 10 квітня 2020 р.
+                    </p>
+
+                    <p class="discount__description">
+                        ми привеземо вам аппарат <strong>Мікро ХМ. (WiFi або GPRS)</strong> , повністю готовий до
+                        роботи, зареєстрований
+                        та введений в
+                        експлуатацію. ви просто вмикаєте та починаєте працювати за наданою нами інструкцією. Все просто!
+                    </p>
+
+                    <p class="price">Цена: 3 980 грн</p>
+
+                    <p class="note">
+                        * Пропозиція дійсна за умови заключення сервісного контракту.
+                    </p>
+
+                    <button class="btn">Замовити</button>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <section class="products">
+        <div class="container">
+            <h3 class="title">Обладнання / РРО</h3>
+
+            <div class="product__card">
+                <div class="product__card-slider mr-36" id="product__slider-1">
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-1.png" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-2.png" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-1.png" alt="" class="item-img">
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="prev">
+                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="21" cy="21" r="20" fill="white" stroke="#00A3DA" stroke-width="2" />
+                            <path d="M23.6923 15.0771L17.2308 21.5387L23.6923 28.0002" stroke="#D8267E" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                    <button class="next">
+                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle r="20" transform="matrix(-1 0 0 1 21 21)" fill="white" stroke="#00A3DA"
+                                stroke-width="2" />
+                            <path d="M18.3077 15.0771L24.7693 21.5387L18.3077 28.0002" stroke="#D8267E" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+
+                <div class="product__card-description">
+                    <div class="product-title">
+                        Мікро ХМ. з WiFi
+                    </div>
+
+                    <p class="product__description">
+                        Новий портативний реєстратор розрахункових операцій (РРО) Мікро ХМ призначений для проведення
+                        фіскальних операцій у
+                        торгових точках різноманітного призначення. Модель Мікро ХМ має відмінні експлуатаційні
+                        властивості, невеликий розмір та
+                        сучасний...
+                    </p>
+
+                    <a href="" class="more">Читати більше</a>
+
+                    <p class="product__who">
+                        Для кого:
+                    </p>
+
+                    <ul class="product__who-list">
+                        <li class="item">
+                            <p>Виїзна й стаціонарна торгівля</p>
+                        </li>
+                        <li class="item">
+                            <p>Торгівля на ринках та у кіосках</p>
+                        </li>
+                        <li class="item">
+                            <p>Сфера обслуговування</p>
+                        </li>
+                        <li class="item">
+                            <p>Прийом платежів у населення вдома</p>
+                        </li>
+                    </ul>
+
+                    <div class="product__price">
+                        <span class="price-title">Цiна: </span> <span class="price-cost">4 900 грн</span>
+                    </div>
+
+                    <button class="btn">Замовити консультацію</button>
+                    <button class="btn">Купити</button>
+                </div>
+            </div>
+
+            <div class="product__card">
+                <div class="product__card-description mr-36">
+                    <div class="product-title">
+                        Мікро ХМ. з WiFi
+                    </div>
+
+                    <p class="product__description">
+                        Новий портативний реєстратор розрахункових операцій (РРО) Мікро ХМ призначений для проведення
+                        фіскальних операцій у
+                        торгових точках різноманітного призначення. Модель Мікро ХМ має відмінні експлуатаційні
+                        властивості, невеликий розмір та
+                        сучасний...
+                    </p>
+
+                    <a href="" class="more">Читати більше</a>
+
+                    <p class="product__who">
+                        Для кого:
+                    </p>
+
+                    <ul class="product__who-list">
+                        <li class="item">
+                            <p>Виїзна й стаціонарна торгівля</p>
+                        </li>
+                        <li class="item">
+                            <p>Торгівля на ринках та у кіосках</p>
+                        </li>
+                        <li class="item">
+                            <p>Сфера обслуговування</p>
+                        </li>
+                        <li class="item">
+                            <p>Прийом платежів у населення вдома</p>
+                        </li>
+                    </ul>
+
+                    <div class="product__price">
+                        <span class="price-title">Цiна: </span> <span class="price-cost">4 900 грн</span>
+                    </div>
+
+                    <button class="btn">Замовити консультацію</button>
+                    <button class="btn">Купити</button>
+                </div>
+
+                <div class="product__card-slider" id="product__slider-2">
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-1.png" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-2.png" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-1.png" alt="" class="item-img">
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="prev--2">
+                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="21" cy="21" r="20" fill="white" stroke="#00A3DA" stroke-width="2" />
+                            <path d="M23.6923 15.0771L17.2308 21.5387L23.6923 28.0002" stroke="#D8267E" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                    <button class="next--2">
+                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle r="20" transform="matrix(-1 0 0 1 21 21)" fill="white" stroke="#00A3DA"
+                                stroke-width="2" />
+                            <path d="M18.3077 15.0771L24.7693 21.5387L18.3077 28.0002" stroke="#D8267E" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback">
+        <div class="container">
+            <form action="#" method="POST" class="feedback__form">
+                <legend class="title feedback__form-title">Зв'яжіться з нами</legend>
+                <p class="feedback__form-subtitle">
+                    Будь ласка, заповніть форму нижче та отримайте безкоштовну консультацію
+                </p>
+
+                <label>
+                    <input type="text" class="form__input">
+                </label>
+
+                <label>
+                    <input type="tel" class="form__input">
+                </label>
+
+                <label>
+                    <input type="email" class="form__input">
+                </label>
+
+                <button class="btn form__submit">Надіслати</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="flex-container jc-space-between ai-center">
+            <div class="footer__text">
+                <h5 class="title">Контакти</h5>
+
+                <p class="footer__address">
+                    <em>Адреса:</em> м. Київ, вул. Січових Стрільців, 103
+                </p>
+
+                <div class="footer__contacts">
+                    <img src="assets/icons/phone.svg" alt="" class="icon">
+                    <p class="number"> 044-228-74-83
+                    </p>
+
+                    <p class="email"><strong>Пошта:</strong> rro@fnt.com.ua</p>
+                </div>
+
+                <p class="work-our"><em>Години роботи:</em> пн - пт 9:00 - 18:00</p>
+                <button class="btn">Стати партнером</button>
+            </div>
+
+            <div class="footer-logo">
+                <img src="assets/images/footer-logo.png" alt="" class="logo-img">
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="modal__consultation undisplay">
+        <div class="modal-container">
+            <h3 class="title">Консультація з питань придбання</h3>
+
+            <p class="subtitle">
+                Будь ласка, заповніть форму
+            </p>
+
+            <form action="#" method="POST" class="modal__form flex-row-vertical">
+                <label class="modal__label">
+                    Ваше ім’я: <sup>*</sup>
+                    <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                </label>
+
+                <label class="modal__label">
+                    Ваш телефон: <sup>*</sup>
+                    <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                </label>
+
+                <label class="modal__label">
+                    Ваш e-mail:
+                    <input class="modal__input" type="email" placeholder="Ваш Email">
+                </label>
+
+                <input class="btn" type="submit" value="Надіслати заявку">
+            </form>
+        </div>
+    </div>
+
+    <div class="modal modal__partners undisplay">
+        <div class="modal-container">
+            <h3 class="title">Стати партнером</h3>
+
+            <p class="subtitle">
+                Будь ласка, заповніть форму
+            </p>
+
+            <form action="#" method="POST" class="modal__form flex-row-vertical">
+                <label class="modal__label">
+                    Ваше ім’я: <sup>*</sup>
+                    <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                </label>
+
+                <label class="modal__label">
+                    Ваш телефон: <sup>*</sup>
+                    <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                </label>
+
+                <label class="modal__label">
+                    Назва компанії: <sup>*</sup>
+                    <input class="modal__input" type="tel" placeholder="Назва">
+                </label>
+
+                <label class="modal__label">
+                    Ваш e-mail:
+                    <input class="modal__input" type="email" placeholder="Ваш Email">
+                </label>
+
+                <input class="btn" type="submit" value="Стати партнером">
+            </form>
+        </div>
+        <button class="modal__close">
+            <img src="assets/icons/close.png" alt="">
+        </button>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="app/js/slick/slick.min.js"></script>
+    <script src="app/js/main.js"></script>
+
+</body>
+
+</html>
