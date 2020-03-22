@@ -16,11 +16,23 @@
 }
 
 .article-wrapper {
-  padding: 55px 175px;
+  padding: 55px 100px;
+
+  @media screen and(max-width: 1170px) {
+    padding: 45px 50px 30px;
+  }
+
+  @media screen and(max-width: 460px) {
+    padding: 25px 30px 15px; 
+  }
 }
 
 .article-wrapper--wide {
   padding: 55px 70px;
+
+  @media screen and(max-width: 945px) {
+    padding: 45px 20px;
+  }
 }
 
 .article__two-column {
@@ -40,23 +52,25 @@
       margin-bottom: 40px;
     }
   }
-}
 
-.article__three-column {
-  margin-top: 35px;
-  padding-left: 85px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  @media screen and(max-width: 670px) {
+    flex-direction: column;
+    flex-basis: 100%;
 
-  .article__bullet-list {
-    flex-basis : 30%;
+
+    .article__bullet-list:first-of-type {
+      margin-right: 0;
+    }
+    .item {
+      margin-bottom: 30px;
+    }
   }
 }
 
+
 .article__four-column {
   display: flex;
-  padding-left: 15px;
+  // padding-left: 15px;
 
   .article__bullet-list {
     flex-basis: 25%;
@@ -65,6 +79,36 @@
   .article__bullet-list:not(:last-child) {
     margin-right: 40px;
   }
+
+  @media screen and(max-width: 1115px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    .article__bullet-list {
+      // text-align: center;
+      flex-basis: 35%;
+
+      .item-text {
+        width: 100%;
+      }
+    }
+
+    .article__bullet-list:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and(max-width: 945px) {
+    justify-content: space-between;
+
+    
+  }
+
+  @media screen and(max-width: 773px) {
+    // align-items: center;
+    // text-align: center;
+    flex-direction: column;
+  }
 }
 
 .article-title {
@@ -72,35 +116,42 @@
   font-size: 22px;
   font-weight: bold;
   line-height: 27px;
+
+  @media screen and(max-width: 1169px) {
+    text-align: center;
+  }
 }
 
 .article-title--second {
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .title--little {
   display: block;
   font-weight: bold;
   color: #000;
-  padding-left: 70px;
+  // padding-left: 70px;
 }
 
 .article-subtitle {
   margin-bottom: 20px;
   font-weight: 500;
   line-height: 23px;
+  width: 60%;
 }
 
 .article-description {
   margin-bottom: 20px;
+  line-height: 20px;
+  width: 50%;
 }
 
 .article__bullet-list {
   list-style-image: url('../../assets/icons/list-style.svg');
   text-align-last: left;
-
+  padding-left: 15px;
   .item {
     margin-bottom: 10px;
     font-size: 14px;

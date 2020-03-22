@@ -54,12 +54,14 @@
                     <a href="#"><img src="assets/icons/phone.svg" alt="" class="icon"></a>
                 </div>
             </div>
+
+            <div class="header__burger undisplay">
+                <div class="line line--first"></div>
+                <div class="line line--second"></div>
+            </div>
         </div>
 
-        <div class="header__burger">
-            <div class="line line--first"></div>
-            <div class="line line--second"></div>
-        </div>
+
     </header>
 
     <section class="intro">
@@ -75,12 +77,8 @@
             <img src="assets/images/intro-background.png" alt="">
         </div>
 
-        <div class="circle circle-little">
-        </div>
-
-        <div class="circle circle-big">
-        </div>
-
+        <div class="circle circle-little"></div>
+        <div class="circle circle-big"></div>
     </section>
 
     <section class="about">
@@ -168,12 +166,13 @@
                 <div class="article-wrapper">
                     <h5 class="article-title">До 1 жовтня 2020 р.</h5>
                     <div class="article-subtitle">
-                        Платники єдиного податку, ФОП другої - четвертої груп з 19 квітня 2020 р. мають можливість
+                        Платники єдиного податку, ФОП другої - четвертої груп з 19 квітня 2020 р. мають <br>
+                        можливість
                         ввести в експлуатацію РРО та
-                        в обов’язковому порядку мають почати застосування до 1 жовтня 2020 р.!
+                        в обов’язковому порядку мають почати <br> застосування до 1 жовтня 2020 р.!
                     </div>
                     <p class="article-description">
-                        у яких обсяг доходу перевищує 1 мільйон гривень протягом календарного року
+                        у яких обсяг доходу перевищує 1 мільйон гривень протягом календарного року <br>
                         та ФОП другої - четвертої груп, які здійснюють:
                     </p>
                     <ul class="article__bullet-list">
@@ -289,9 +288,9 @@
     </section>
 
     <section class="description">
-        <div class="flex-container">
-            <div class="desctiption__text">
-                <h5 class="title">Що таке РРО?</h5>
+        <h5 class="title title--description">Що таке РРО?</h5>
+        <div class="flex-container jc-space-between">
+            <div class="description__text">
                 <p class="description-definition">
                     Реєстратор розрахункових операцій (РРО) - пристрій або програмно-технічний комплекс, в якому
                     реалізовані фіскальні функції і який призначений для реєстрації розрахункових операцій при продажу
@@ -309,8 +308,7 @@
         <div class="container">
             <div class="title--little">
                 <h5 class="title-tooltip">
-                    До реєстраторів розрахункових операцій відносяться:
-                    <span class="tooltip"><img src="assets/icons/tooltip.svg" alt=""></span>
+                    До реєстраторів розрахункових операцій <span class="tooltip">відносяться:</span>
                 </h5>
             </div>
         </div>
@@ -453,7 +451,7 @@
 
     <div class="discount">
         <div class="container">
-            <article class="article">
+            <article class="article article--discount">
                 <div class="article-wrapper">
                     <h5 class="title">Акційна пропозиція</h5>
 
@@ -462,7 +460,8 @@
                     </p>
 
                     <p class="discount__description">
-                        ми привеземо вам аппарат <strong>Мікро ХМ. (WiFi або GPRS)</strong> , повністю готовий до
+                        ми привеземо вам аппарат <span class="strong"> Мікро ХМ. (WiFi або GPRS) </span> , повністю
+                        готовий до
                         роботи, зареєстрований
                         та введений в
                         експлуатацію. ви просто вмикаєте та починаєте працювати за наданою нами інструкцією. Все просто!
@@ -485,6 +484,7 @@
             <h3 class="title">Обладнання / РРО</h3>
 
             <div class="product__card">
+
                 <div class="product__card-slider mr-36" id="product__slider-1">
                     <div class="slider-item">
                         <img src="assets/images/products/product-1.png" alt="" class="item-img">
@@ -532,8 +532,6 @@
                         сучасний...
                     </p>
 
-                    <a href="" class="more">Читати більше</a>
-
                     <p class="product__who">
                         Для кого:
                     </p>
@@ -557,12 +555,15 @@
                         <span class="price-title">Цiна: </span> <span class="price-cost">4 900 грн</span>
                     </div>
 
-                    <button class="btn">Замовити консультацію</button>
-                    <button class="btn">Купити</button>
+                    <div class="btn-container">
+                        <button class="btn--lighten">Замовити консультацію</button>
+                        <button class="btn">Купити</button>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="product__card">
+            <div class="product__card" id="product__card-2">
                 <div class="product__card-description mr-36">
                     <div class="product-title">
                         Мікро ХМ. з WiFi
@@ -601,7 +602,8 @@
                         <span class="price-title">Цiна: </span> <span class="price-cost">4 900 грн</span>
                     </div>
 
-                    <button class="btn">Замовити консультацію</button>
+
+                    <button class="btn--lighten">Замовити консультацію</button>
                     <button class="btn">Купити</button>
                 </div>
 
@@ -641,6 +643,7 @@
         </div>
     </section>
 
+
     <section class="feedback">
         <div class="container">
             <form action="#" method="POST" class="feedback__form">
@@ -666,7 +669,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="flex-container jc-space-between ai-center">
             <div class="footer__text">
                 <h5 class="title">Контакти</h5>
@@ -691,7 +694,7 @@
                 <img src="assets/images/footer-logo.png" alt="" class="logo-img">
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 
     <div class="modal__consultation undisplay">

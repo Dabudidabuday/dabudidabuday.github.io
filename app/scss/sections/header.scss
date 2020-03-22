@@ -4,6 +4,7 @@
 }
 
 .header-container {
+  position: relative;
   margin: 0 auto;
   display: flex; 
   justify-content: space-between;
@@ -72,8 +73,8 @@ margin-right: 40px;
 }
 
 .header__burger {
-  position: fixed;
-  top: -10px;
+  position: absolute;
+  top: -15px;
   right: 30px;
   margin: 20px;
   padding: 15px;
