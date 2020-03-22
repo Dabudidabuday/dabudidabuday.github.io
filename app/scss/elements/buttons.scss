@@ -40,3 +40,26 @@
   }
  
 }
+
+.btn--lighten {
+  font-size: $minFontSize;
+  font-weight: bold;
+  color: #1D1D1E;
+  padding: 20px;
+  max-width: 230px;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #AABDC8;
+  border-radius: 8px;
+  transition: .3s;
+  cursor: pointer;
+  transition: ease-in-out .2s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: #AABDC8;
+    border: 2px solid #AABDC8;
+  }
+  
+}
