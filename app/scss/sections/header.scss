@@ -1,0 +1,176 @@
+.header {
+  border-bottom: 2px solid #EDEDED;
+  z-index: 4;
+}
+
+.header-container {
+  position: relative;
+  margin: 0 auto;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  max-width: 1351px;
+  width: 100%;
+
+  @media screen and(max-width: 448px) {
+    padding: 10px 20px;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+
+  .item:not(:last-child) {
+    margin-right: 55px;
+  }
+
+  .item-link {
+    color: $textColor;
+    line-height: 19px;
+    transition: all .2s;
+    cursor: pointer;
+
+    &:hover {
+      color: #00A3DA;
+      text-shadow: 0px 0px 1px   #00A3DA;
+      
+    }
+  }
+}
+
+
+.header__utility {
+display: flex;
+margin-right: 40px;
+
+  @media screen and(max-width: 980px) {
+    display: none;
+  }
+
+  @media screen and(max-width: 824px) {
+    display: flex;
+  }
+
+  @media screen and(max-width: 447px) {
+    margin-right: 55px;
+  }
+}
+
+.header__utility--lang {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  
+
+  .header__utility-lang-img {
+    margin-right: 7px;
+  }
+}
+
+.header__utility--phone {
+  a {
+    display: block;
+    height: 100%;
+  }
+
+  @media screen and(max-width: 400px) {
+    display: none;
+  }
+}
+
+.header__burger {
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  margin: 20px;
+  padding: 15px;
+  z-index: 11;
+  cursor: pointer;
+  display: none;
+
+  .line--first,
+  .line--second {
+    transition: all .4s;
+    transform-origin: 28px 2px;
+  }
+
+  @media screen and(max-width: 824px) {
+    display: block;
+  }
+
+  &.show {
+    .line--first {
+      transform: rotate(-45deg);
+      
+    }
+
+    .line--second {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.line {
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+}
+
+.line--first {
+  background-color: #00a3da;
+}
+
+.line--second {
+  margin-top: 12px;
+  background-color: #D8267E;
+}
+
+/*
+** Мобильное меню
+*/
+@media screen and(max-width: 824px) {
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    transition: all .5s;
+    opacity: 0;
+     
+    &.show {
+      height: 100%;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .header__nav-list {
+    position: fixed;
+    top: 0;
+    left: calc(50% - 75px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+
+
+    li.item {
+      //перебить селектор .item:not(:last-child)
+      margin-right: 0 !important;
+
+      margin-top: 60px;
+      
+    }
+  }
+}
+
+
