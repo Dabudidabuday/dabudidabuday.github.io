@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700,900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="app/scss/libraries/slick.css" />
     <link rel="stylesheet" type="text/css" href="app/scss/libraries/slick-theme.css" />
     <link rel="stylesheet" href="dist/main.css">
@@ -55,13 +55,11 @@
                 </div>
             </div>
 
-            <div class="header__burger undisplay">
-                <div class="line line--first"></div>
-                <div class="line line--second"></div>
+            <div class="header__burger">
+                <div class="line line--first anim-btn-1"></div>
+                <div class="line line--second anim-btn-2"></div>
             </div>
         </div>
-
-
     </header>
 
     <section class="intro">
@@ -82,7 +80,7 @@
     </section>
 
     <section class="about">
-        <div class="flex-container jc-space-around">
+        <div class="flex-container jc-space-between">
             <div class="about__text">
                 <h3 class="about__title">ПРО ЗАКОН</h3>
 
@@ -166,13 +164,13 @@
                 <div class="article-wrapper">
                     <h5 class="article-title">До 1 жовтня 2020 р.</h5>
                     <div class="article-subtitle">
-                        Платники єдиного податку, ФОП другої - четвертої груп з 19 квітня 2020 р. мають <br>
+                        Платники єдиного податку, ФОП другої - четвертої груп з 19 квітня 2020 р. мають
                         можливість
                         ввести в експлуатацію РРО та
-                        в обов’язковому порядку мають почати <br> застосування до 1 жовтня 2020 р.!
+                        в обов’язковому порядку мають почати застосування до 1 жовтня 2020 р.!
                     </div>
                     <p class="article-description">
-                        у яких обсяг доходу перевищує 1 мільйон гривень протягом календарного року <br>
+                        у яких обсяг доходу перевищує 1 мільйон гривень протягом календарного року
                         та ФОП другої - четвертої груп, які здійснюють:
                     </p>
                     <ul class="article__bullet-list">
@@ -310,7 +308,17 @@
                 <h5 class="title-tooltip">
                     До реєстраторів розрахункових операцій <span class="tooltip">відносяться:</span>
                 </h5>
+                <!-- <div class="tooltip-window">
+                    <div class="tooltip-inner">
+                        <p class="tooltip-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, laboriosam nobis ratione
+                            voluptate nemo quia accusantium perferendis autem fuga mollitia.
+                        </p>
+                    </div>
+                </div> -->
             </div>
+
+
         </div>
 
         <div class="flex-container">
@@ -449,7 +457,7 @@
         </div>
     </div>
 
-    <div class="discount">
+    <section class="discount">
         <div class="container">
             <article class="article article--discount">
                 <div class="article-wrapper">
@@ -477,7 +485,7 @@
                 </div>
             </article>
         </div>
-    </div>
+    </section>
 
     <section class="products">
         <div class="container">
@@ -502,17 +510,17 @@
                 <div class="slider-controls">
                     <button class="prev">
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="21" cy="21" r="20" fill="white" stroke="#00A3DA" stroke-width="2" />
-                            <path d="M23.6923 15.0771L17.2308 21.5387L23.6923 28.0002" stroke="#D8267E" stroke-width="2"
+                            <circle cx="21" cy="21" r="20" fill="white" stroke="#AABDC8" stroke-width="2" />
+                            <path d="M23.6923 15.0771L17.2308 21.5387L23.6923 28.0002" stroke="#AABDC8" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
 
                     <button class="next">
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle r="20" transform="matrix(-1 0 0 1 21 21)" fill="white" stroke="#00A3DA"
+                            <circle r="20" transform="matrix(-1 0 0 1 21 21)" fill="white" stroke="#AABDC8"
                                 stroke-width="2" />
-                            <path d="M18.3077 15.0771L24.7693 21.5387L18.3077 28.0002" stroke="#D8267E" stroke-width="2"
+                            <path d="M18.3077 15.0771L24.7693 21.5387L18.3077 28.0002" stroke="#AABDC8" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
@@ -602,9 +610,11 @@
                         <span class="price-title">Цiна: </span> <span class="price-cost">4 900 грн</span>
                     </div>
 
+                    <div class="btn-container">
+                        <button class="btn--lighten">Замовити консультацію</button>
+                        <button class="btn">Купити</button>
+                    </div>
 
-                    <button class="btn--lighten">Замовити консультацію</button>
-                    <button class="btn">Купити</button>
                 </div>
 
                 <div class="product__card-slider" id="product__slider-2">
@@ -624,17 +634,17 @@
                 <div class="slider-controls">
                     <button class="prev--2">
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="21" cy="21" r="20" fill="white" stroke="#00A3DA" stroke-width="2" />
-                            <path d="M23.6923 15.0771L17.2308 21.5387L23.6923 28.0002" stroke="#D8267E" stroke-width="2"
+                            <circle cx="21" cy="21" r="20" fill="white" stroke="#AABDC8" stroke-width="2" />
+                            <path d="M23.6923 15.0771L17.2308 21.5387L23.6923 28.0002" stroke="#AABDC8" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
 
                     <button class="next--2">
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle r="20" transform="matrix(-1 0 0 1 21 21)" fill="white" stroke="#00A3DA"
+                            <circle r="20" transform="matrix(-1 0 0 1 21 21)" fill="white" stroke="#AABDC8"
                                 stroke-width="2" />
-                            <path d="M18.3077 15.0771L24.7693 21.5387L18.3077 28.0002" stroke="#D8267E" stroke-width="2"
+                            <path d="M18.3077 15.0771L24.7693 21.5387L18.3077 28.0002" stroke="#AABDC8" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
@@ -669,7 +679,7 @@
         </div>
     </section>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="flex-container jc-space-between ai-center">
             <div class="footer__text">
                 <h5 class="title">Контакти</h5>
@@ -679,25 +689,28 @@
                 </p>
 
                 <div class="footer__contacts">
-                    <img src="assets/icons/phone.svg" alt="" class="icon">
-                    <p class="number"> 044-228-74-83
+                    <p class="number"><span class="strong">Телефон: </span>044-228-74-83
                     </p>
 
-                    <p class="email"><strong>Пошта:</strong> rro@fnt.com.ua</p>
+                    <div class="email">
+                        <span class="strong">Пошта: </span>
+                        <p class="email-text">rro@fnt.com.ua</p>
+                    </div>
+
                 </div>
 
                 <p class="work-our"><em>Години роботи:</em> пн - пт 9:00 - 18:00</p>
-                <button class="btn">Стати партнером</button>
+                <button class="btn--lighten">Стати партнером</button>
             </div>
 
             <div class="footer-logo">
                 <img src="assets/images/footer-logo.png" alt="" class="logo-img">
             </div>
         </div>
-    </footer> -->
+    </footer>
 
 
-    <div class="modal__consultation undisplay">
+    <div class="modal modal__consultation undisplay">
         <div class="modal-container">
             <h3 class="title">Консультація з питань придбання</h3>
 
@@ -763,6 +776,7 @@
         </button>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="app/js/slick/slick.min.js"></script>
