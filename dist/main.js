@@ -21,64 +21,64 @@ $(document).ready(function () {
 });
 
 
-'use strict';
+// 'use strict';
 
-let open = document.querySelector('.btn--intro');
-let close = document.querySelector('.modal__close');
-let modal = document.querySelector('.modal__partners');
+// OVERLAY
 let overlay = document.querySelector('#overlay');
 
+// MODAL WINDOWS
+let modalPartners = document.querySelector('.modal__partners');
+let modalConsultation = document.querySelector('.modal__consultation');
 
-open.addEventListener('click', function () {
-    overlay.style.visibility = "visible";
-    modal.classList.toggle('undisplay');
-})
+// MODAL OPEN BUTTONS
+let introBtn = document.querySelector('.btn--intro');
 
-close.addEventListener('click', function () {
-    overlay.style.visibility = "hidden";
-    modal.classList.toggle('undisplay');
-})
 
+let modalCloseBtn = document.querySelector('.modal__close');
+
+
+
+
+
+function modalOpen(button, form) {
+    button.addEventListener('click', function () {
+        overlay.classList.remove('undisplay');
+        form.classList.remove('undisplay');
+    })
+};
+
+function modalClose(form) {
+    modalCloseBtn.addEventListener('click', function () {
+        overlay.classList.add('undisplay');
+        form.classList.add('undisplay');
+    });
+
+    window.onclick = function (event) {
+        if (event.target == overlay) {
+            overlay.classList.add("undisplay");
+            form.classList.add("undisplay");
+        }
+    };
+};
+
+modalOpen(introBtn, modalPartners);
+modalClose(modalPartners);
 
 /* 
 ** Header menu
 */
 
-let toggleMenu = document.querySelector('.header__burger'),
-    headerMenu = document.querySelector('.header__nav');
+let toggleMenuBtn = document.querySelector('.header__burger'),
+    headerNavMenu = document.querySelector('.header__nav');
 
-toggleMenu.addEventListener('click', function () {
-    headerMenu.classList.toggle('show');
+toggleMenuBtn.addEventListener('click', function () {
+    headerNavMenu.classList.toggle('show');
+    toggleMenuBtn.classList.toggle('show');
 })
 
 
 
-// var t1 = new TimelineMax({ paused: true });
 
-// t1.to(".line--first", 0.3, {
-//     y: 6,
-//     rotation: 45,
-//     ease: Expo.easeInOut
-// });
-// t1.to(".line--second", 0.4, {
-//     y: -6,
-//     rotation: -45,
-//     ease: Expo.easeInOut,
-//     delay: -0.8
-// });
 
-// t1.to(".header__nav", 1, {
-//     top: "0%",
-//     ease: Expo.easeInOut,
-//     delay: -1.4
-// });
 
-// t1.staggerFrom(".header__nav .item", 1.4, { x: 200, opacity: 0, ease: Expo.easeOut }, 0.3);
 
-// t1.reverse();
-// $(document).on("click", ".header__burger", function () {
-//     t1.reversed(!t1.reversed());
-// });
-// $(document).on("click", "header__nav a", function () {
-//     t1.reversed(!t1.reversed());
-// });

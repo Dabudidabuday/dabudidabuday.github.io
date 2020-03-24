@@ -30,8 +30,8 @@
   width: 100%;
   font-size: 22px;
   font-weight: 500;
-  color: inherit;
-  background: #FFFFFF;
+  color: #9F9D9D;
+  background-color: #FFFFFF;
   border: 2px solid #C4C4C4;
   border-radius: 8px;
   outline: none;
@@ -40,7 +40,11 @@
  
   &:focus {
     background: #F8FCFE;
-    border: 2px solid #D8267E;
+    border: 2px solid #AABDC8;
+  }
+
+  &::placeholder {
+    color: #9F9D9D;
   }
 }
 

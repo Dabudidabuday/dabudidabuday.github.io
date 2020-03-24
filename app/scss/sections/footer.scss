@@ -18,6 +18,15 @@
     font-size: 21px;
     line-height: 25px;
   }
+
+  @media screen and(max-width: 866px) {
+    width: 100%;
+    text-align: center;
+
+    .btn--lighten {
+      margin: 0 auto;
+    }
+  }
 }
 
 .footer__contacts {
@@ -26,11 +35,36 @@
   line-height: 50px;
 
   .number {
-    padding-left: 10px;
     margin-right: 50px;
+
+    @media screen and (max-width: 510px){
+      margin-right: 0;
+    }
   }
+
+  .email-text {
+    margin-left: 5px;
+    display: inline-block;
+    color: #00a3da;
+    text-decoration: underline;
+  }
+ 
+
+  @media screen and(max-width: 866px) {
+    justify-content: center;
+  }
+
+  @media screen and(max-width: 510px) {
+    flex-direction: column;
+  } 
 }
 
 .work-our {
   margin-bottom: 30px;
+}
+
+.footer-logo {
+  @media screen and(max-width: 866px) {
+    display: none;
+  }
 }

@@ -160,11 +160,17 @@
   border: none;
   outline: none;
   z-index: 2;
+  transition: .3s;
 
   &:hover svg circle {
-    stroke: red;
-    background-color: red;
+    fill: #AABDC8;
+    transition: .2s;
   }
+
+  &:hover path {
+    stroke: #fff;
+  }
+  
 }
 
 .prev {
