@@ -32,6 +32,10 @@ let modalConsultation = document.querySelector('.modal__consultation');
 
 // MODAL OPEN BUTTONS
 let introBtn = document.querySelector('.btn--intro');
+let consultBtn = document.getElementById('consultBtn');
+let discountBtn = document.getElementById('discountBtn');
+let productConsult1 = document.getElementById('productConsult--1');
+let productConsult2 = document.getElementById('productConsult--2');
 
 
 let modalCloseBtn = document.querySelector('.modal__close');
@@ -62,7 +66,15 @@ function modalClose(form) {
 };
 
 modalOpen(introBtn, modalPartners);
+modalOpen(consultBtn, modalConsultation);
+modalOpen(discountBtn, modalConsultation);
+modalOpen(productConsult1, modalConsultation);
+modalOpen(productConsult2, modalConsultation);
+
+
+
 modalClose(modalPartners);
+modalClose(modalConsultation);
 
 /* 
 ** Header menu
