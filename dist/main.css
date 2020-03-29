@@ -784,6 +784,9 @@ a {
   .consultation .btn {
     max-width: 286px;
     width: 100%; }
+  @media screen and (max-width: 664px) {
+    .consultation .title {
+      font-size: 25px; } }
 
 .discount {
   text-align: center; }
@@ -868,7 +871,8 @@ a {
 
 .product__card {
   display: flex;
-  position: relative; }
+  position: relative;
+  margin-bottom: 50px; }
   @media screen and (max-width: 990px) {
     .product__card {
       flex-direction: column;
@@ -877,49 +881,71 @@ a {
         max-width: 60%;
         margin-right: 0; }
       .product__card .prev,
-      .product__card .next {
+      .product__card .next,
+      .product__card .prev--2,
+      .product__card .next--2 {
         top: 20%; }
-      .product__card .prev {
+      .product__card .prev,
+      .product__card .prev--2 {
         left: 20%; }
-      .product__card .next {
+      .product__card .next,
+      .product__card .next--2 {
         left: 73%; } }
   @media screen and (max-width: 847px) {
     .product__card .product__card-slider {
       max-width: 80%; }
-    .product__card .prev {
+    .product__card .prev,
+    .product__card .prev--2 {
       left: 10%; }
-    .product__card .next {
+    .product__card .next,
+    .product__card .next--2 {
       left: 81.5%; } }
   @media screen and (max-width: 694px) {
     .product__card .product__card-slider {
       max-width: 100%; }
-    .product__card .prev {
+    .product__card .prev,
+    .product__card .prev--2 {
       left: 2%; }
-    .product__card .next {
+    .product__card .next,
+    .product__card .next--2 {
       left: 88%; } }
   @media screen and (max-width: 544px) {
     .product__card .prev,
-    .product__card .next {
+    .product__card .next,
+    .product__card .prev--2,
+    .product__card .next--2 {
       top: 17%; }
-    .product__card .prev {
+    .product__card .prev,
+    .product__card .prev--2 {
       left: 1.5%; }
-    .product__card .next {
+    .product__card .next,
+    .product__card .next--2 {
       left: 87%; } }
   @media screen and (max-width: 485px) {
-    .product__card .prev {
+    .product__card .prev,
+    .product__card .prev--2 {
       left: 0; }
-    .product__card .next {
+    .product__card .next,
+    .product__card .next--2 {
       left: 85.5%; } }
   @media screen and (max-width: 403px) {
-    .product__card .next {
+    .product__card .next,
+    .product__card .next--2 {
       left: 84%; } }
 
 #product__card-2 {
-  text-align: right; }
+  text-align: right;
+  padding-bottom: 50px; }
   #product__card-2 .product__who-list {
-    text-align: right; }
+    text-align: right;
+    list-style-type: none; }
+  @media screen and (max-width: 990px) {
+    #product__card-2 {
+      text-align: left; }
+      #product__card-2 .product__who-list {
+        text-align: left; } }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990px) {
   #product__slider-2 {
     order: -1; } }
 
@@ -929,14 +955,18 @@ a {
   margin-bottom: 14px;
   font-size: 26px; }
 
+.btn-container .btn {
+  max-width: 180px; }
+
 .btn-container .btn--lighten {
   margin-right: 18px; }
 
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 495px) {
   .btn-container {
     text-align: center; }
     .btn-container .btn--lighten {
-      margin-right: 0;
+      display: block;
+      margin: 0 auto;
       margin-bottom: 15px; } }
 
 .product__card-slider {
@@ -1003,7 +1033,7 @@ a {
   font-size: 26px;
   line-height: 37px;
   color: #00A3DA; }
-  @media screen and (max-width: 417px) {
+  @media screen and (max-width: 495px) {
     .product__price {
       text-align: center; } }
 
@@ -1106,11 +1136,20 @@ a {
   font-weight: 500;
   line-height: 23px;
   width: 55%; }
+  @media screen and (max-width: 857px) {
+    .article-subtitle {
+      width: 80%; } }
+  @media screen and (max-width: 540px) {
+    .article-subtitle {
+      width: 100%; } }
 
 .article-description {
   margin-bottom: 20px;
-  line-height: 20px;
-  width: 50%; }
+  line-height: 25px;
+  width: 60%; }
+  @media screen and (max-width: 1184px) {
+    .article-description {
+      width: 100%; } }
 
 .article__bullet-list {
   list-style-image: url("../../assets/icons/list-style.svg");
@@ -1123,7 +1162,7 @@ a {
 
 .modal {
   position: fixed;
-  top: 50px;
+  top: 10px;
   left: calc(50% - 305px);
   max-width: 610px;
   width: 100%;
@@ -1196,4 +1235,4 @@ body {
   left: 0;
   background-color: rgba(25, 25, 25, 0.7);
   z-index: 9;
-  transition: all .4s; }
+  transition: all 1s; }

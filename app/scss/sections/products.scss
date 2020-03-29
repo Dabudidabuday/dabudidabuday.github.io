@@ -12,6 +12,7 @@
 .product__card {
   display: flex;
   position: relative;
+  margin-bottom: 50px;
 
   @media screen and(max-width: 990px) {
     flex-direction: column;
@@ -23,16 +24,20 @@
     }
 
     .prev,
-    .next {
+    .next,
+    .prev--2,
+    .next--2 {
       top: 20%;
 
     }
 
-    .prev {
+    .prev,
+    .prev--2 {
       left: 20%;
     }
 
-    .next {
+    .next,
+    .next--2 {
       left: 73%;
     }
   }
@@ -43,10 +48,12 @@
       max-width: 80%;
     }
 
-    .prev {
+    .prev,
+    .prev--2 {
       left: 10%;
     }
-    .next {
+    .next,
+    .next--2 {
       left: 81.5%;
     }
 
@@ -57,11 +64,13 @@
       max-width: 100%;
     }
 
-    .prev {
+    .prev,
+    .prev--2 {
       left: 2%;
     }
 
-    .next {
+    .next,
+    .next--2 {
       left: 88%;
     }
   } 
@@ -69,32 +78,39 @@
   @media screen and(max-width: 544px) {
 
     .prev,
-    .next {
+    .next, 
+    .prev--2,
+    .next--2 {
       top: 17%;
     }
 
-    .prev {
+    .prev,
+    .prev--2 {
       left: 1.5%;
     }
 
-    .next {
+    .next,
+    .next--2 {
       left: 87%;
     }
   }
 
   @media screen and(max-width: 485px) {
-    .prev {
+    .prev,
+    .prev--2 {
       left: 0;
     }
 
-    .next {
+    .next,
+    .next--2 {
       left: 85.5%;
     }
   }
 
   @media screen and(max-width: 403px) {
 
-    .next {
+    .next,
+    .next--2 {
       left: 84%;
     }
   }
@@ -102,13 +118,24 @@
 
 #product__card-2 {
   text-align: right;
+  padding-bottom: 50px;
 
   .product__who-list {
     text-align: right;
+    list-style-type: none;
+  }
+
+  @media screen and(max-width: 990px) {
+    text-align: left;
+
+    .product__who-list {
+      text-align: left;
+    }
   }
 }
 
-@media screen and(max-width: 900px) {
+@media screen and(max-width: 990px) {
+
   #product__slider-2 {
     order: -1;
   }
@@ -121,15 +148,21 @@
 }
 
 .btn-container {
+
+  .btn {
+    max-width: 180px;
+  }
   .btn--lighten {
     margin-right: 18px;
   }
 
-  @media screen and(max-width: 435px) {
+  @media screen and(max-width: 495px) {
     text-align: center;
 
+
     .btn--lighten {
-      margin-right: 0;
+      display: block;
+      margin: 0 auto;
       margin-bottom: 15px;
     }
   }
@@ -212,7 +245,7 @@
   line-height: 37px;
   color: #00A3DA;
 
-  @media screen and(max-width: 417px) {
+  @media screen and(max-width: 495px) {
     text-align: center;
   }
 }

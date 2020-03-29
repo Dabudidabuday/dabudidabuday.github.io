@@ -132,6 +132,12 @@
     max-width: 286px;
     width: 100%;
   }
+
+  @media screen and(max-width: 664px) {
+    .title {
+      font-size: 25px;
+    }
+  }
 }
 
 .discount {

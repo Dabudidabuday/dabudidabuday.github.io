@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700,900&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="app/scss/libraries/slick.css" />
-    <link rel="stylesheet" type="text/css" href="app/scss/libraries/slick-theme.css" />
+    <link rel="stylesheet" href="app/libraries/animate.css">
+    <link rel="stylesheet" type="text/css" href="app/libraries/slick.css" />
+    <link rel="stylesheet" type="text/css" href="app/libraries/slick-theme.css" />
     <link rel="stylesheet" href="dist/main.css">
     <title>Document</title>
 </head>
@@ -75,8 +74,8 @@
             <img src="assets/images/intro-background.png" alt="">
         </div>
 
-        <div class="circle circle-little"></div>
-        <div class="circle circle-big"></div>
+        <div class="circle circle-little wow fadeIn"></div>
+        <div class="circle circle-big wow fadeIn"></div>
     </section>
 
     <section class="about">
@@ -160,7 +159,7 @@
                 <h3 class="title">Нові категорії ФОП, які зобов'язані <br> використовувати РРО</h3>
             </div>
 
-            <article class="article">
+            <article class="article wow fadeInUp">
                 <div class="article-wrapper">
                     <h5 class="article-title">До 1 жовтня 2020 р.</h5>
                     <div class="article-subtitle">
@@ -170,8 +169,8 @@
                         в обов’язковому порядку мають почати застосування до 1 жовтня 2020 р.!
                     </div>
                     <p class="article-description">
-                        у яких обсяг доходу перевищує 1 мільйон гривень протягом календарного року
-                        та ФОП другої - четвертої груп, які здійснюють:
+                        1) у яких обсяг доходу перевищує 1 млн грн протягом календарного року <br>
+                        2) у яких обсяг доходу НЕ перевищує 1 млн грн (ФОП 2,3,4 груп), які здійснюють:
                     </p>
                     <ul class="article__bullet-list">
                         <li class="item">
@@ -453,7 +452,7 @@
                 Замовте безкоштовну консультацію з <br> питань придбання РРО
             </h3>
 
-            <button class="btn">Отримати консультацію</button>
+            <button class="btn" id="consultBtn">Отримати консультацію</button>
         </div>
     </div>
 
@@ -481,7 +480,7 @@
                         * Пропозиція дійсна за умови заключення сервісного контракту.
                     </p>
 
-                    <button class="btn">Замовити</button>
+                    <button class="btn" id="discountBtn">Замовити</button>
                 </div>
             </article>
         </div>
@@ -564,7 +563,7 @@
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn--lighten">Замовити консультацію</button>
+                        <button class="btn--lighten" id="productConsult--1">Замовити консультацію</button>
                         <button class="btn">Купити</button>
                     </div>
 
@@ -611,7 +610,7 @@
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn--lighten">Замовити консультацію</button>
+                        <button class="btn--lighten" id="productConsult--2">Замовити консультацію</button>
                         <button class="btn">Купити</button>
                     </div>
 
@@ -737,6 +736,9 @@
                 <input class="btn" type="submit" value="Надіслати заявку">
             </form>
         </div>
+        <button class="modal__close">
+            <img src="assets/icons/close.png" alt="">
+        </button>
     </div>
 
     <div class="modal modal__partners undisplay">
@@ -776,11 +778,14 @@
         </button>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="app/js/slick/slick.min.js"></script>
-    <script src="app/js/main.js"></script>
+    <script src="app/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="dist/main.js"></script>
 
 </body>
 

@@ -140,12 +140,24 @@
   font-weight: 500;
   line-height: 23px;
   width: 55%;
+
+  @media screen and(max-width: 857px) {
+    width: 80%;
+  }
+
+  @media screen and(max-width: 540px) {
+    width: 100%;
+  }
 }
 
 .article-description {
   margin-bottom: 20px;
-  line-height: 20px;
-  width: 50%;
+  line-height: 25px;
+  width: 60%;
+
+  @media screen and(max-width: 1184px) {
+    width: 100%;
+  }
 }
 
 .article__bullet-list {
