@@ -132,9 +132,21 @@
       text-align: left;
     }
   }
+
+  @media screen and(max-width: 900px) {
+    text-align: left;
+
+    .product__who-list {
+      text-align: left;
+    }
+  }
 }
 
+<<<<<<< HEAD
 @media screen and(max-width: 990px) {
+=======
+@media screen and(max-width: 900px) {
+>>>>>>> 95b1fe04b501202343307d339809b17a7ad829b7
 
   #product__slider-2 {
     order: -1;

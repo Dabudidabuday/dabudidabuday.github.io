@@ -65,7 +65,11 @@ function modalClose(form) {
     };
 };
 
+<<<<<<< HEAD
 modalOpen(introBtn, modalConsultation);
+=======
+modalOpen(introBtn, modalPartners);
+>>>>>>> 95b1fe04b501202343307d339809b17a7ad829b7
 modalOpen(consultBtn, modalConsultation);
 modalOpen(discountBtn, modalConsultation);
 modalOpen(productConsult1, modalConsultation);

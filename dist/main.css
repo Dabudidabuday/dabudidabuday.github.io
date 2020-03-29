@@ -937,9 +937,14 @@ a {
   text-align: right;
   padding-bottom: 50px; }
   #product__card-2 .product__who-list {
+<<<<<<< HEAD
     text-align: right;
     list-style-type: none; }
   @media screen and (max-width: 990px) {
+=======
+    text-align: right; }
+  @media screen and (max-width: 900px) {
+>>>>>>> 95b1fe04b501202343307d339809b17a7ad829b7
     #product__card-2 {
       text-align: left; }
       #product__card-2 .product__who-list {
