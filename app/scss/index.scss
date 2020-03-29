@@ -38,6 +38,10 @@ body {
   left: 0;
   background-color: rgba(25, 25, 25, 0.7);
   z-index: 9;
-  transition: all 1s;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+  // transition-delay: .2s;
 }
+
 

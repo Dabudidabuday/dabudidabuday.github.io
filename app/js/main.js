@@ -36,6 +36,7 @@ let consultBtn = document.getElementById('consultBtn');
 let discountBtn = document.getElementById('discountBtn');
 let productConsult1 = document.getElementById('productConsult--1');
 let productConsult2 = document.getElementById('productConsult--2');
+let footerPartnersBtn = document.getElementById('footer-btn--partners');
 
 
 let modalCloseBtn = document.querySelector('.modal__close');
@@ -46,34 +47,31 @@ let modalCloseBtn = document.querySelector('.modal__close');
 
 function modalOpen(button, form) {
     button.addEventListener('click', function () {
-        overlay.classList.remove('undisplay');
-        form.classList.remove('undisplay');
+        overlay.classList.add('modal__show');
+        form.classList.add('modal__show');
     })
 };
 
 function modalClose(form) {
     modalCloseBtn.addEventListener('click', function () {
-        overlay.classList.add('undisplay');
-        form.classList.add('undisplay');
+        overlay.classList.remove('modal__show');
+        form.classList.remove('modal__show');
     });
 
     window.onclick = function (event) {
         if (event.target == overlay) {
-            overlay.classList.add("undisplay");
-            form.classList.add("undisplay");
+            overlay.classList.remove("modal__show");
+            form.classList.remove("modal__show");
         }
     };
 };
 
-<<<<<<< HEAD
 modalOpen(introBtn, modalConsultation);
-=======
-modalOpen(introBtn, modalPartners);
->>>>>>> 95b1fe04b501202343307d339809b17a7ad829b7
 modalOpen(consultBtn, modalConsultation);
 modalOpen(discountBtn, modalConsultation);
 modalOpen(productConsult1, modalConsultation);
 modalOpen(productConsult2, modalConsultation);
+modalOpen(footerPartnersBtn, modalPartners);
 
 
 
@@ -92,9 +90,36 @@ toggleMenuBtn.addEventListener('click', function () {
     toggleMenuBtn.classList.toggle('show');
 })
 
+$(".header__nav-list li a").on("click", function () {
+    // $(".asterion-offcanvas-wrap").removeClass("active");
+    $(".header__nav").removeClass('show');
+    $(".header__burger").removeClass('show');
+    // $(".header__nav").removeClass('show');
+ 
+});
 
 
 
+$(document).ready(function(){
+    $("a[href*=#]").on("click", function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 777);
+        e.preventDefault();
+        return false;
+    });
+});
 
 
+(function($) {
+    $(function() {
+    
+        $('#up').click(function() {
+            $('html, body').animate({scrollTop: 0},500);
+            return false;
+        })
+    
+    })
+    })(jQuery)
 

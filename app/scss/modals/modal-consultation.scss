@@ -1,6 +1,6 @@
 .modal {
     position: fixed;
-    top: 10px;
+    // top: 10px;
     left: calc(50% - 305px);
     max-width: 610px;
     width: 100%;
@@ -8,6 +8,11 @@
     background-color: #fff;
     border-radius: 5px;
     z-index: 100;
+    transition: all ease-in-out .3s;
+    transition-delay: .2s;
+    visibility: hidden;
+    opacity: 0;
+    top: 350px;
 
     .title {
         margin-bottom: 10px;
@@ -55,9 +60,12 @@
     border-radius: 5px;
 }
 
-.modal__partners {
-    top: 0px;
-}
+
+.modal__show {
+    top: 40px;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
 
 .modal__close {
     position: absolute;

@@ -14,29 +14,29 @@
 
 <body>
 
-    <div class="undisplay" id="overlay"></div>
+    <div id="overlay"></div>
     <header class="header">
         <div class="header-container">
             <div class="header__logo">
-                <img src="assets/images/header-logo.png" alt="" class="header__logo-img">
+               <a href="#intro"><img src="assets/images/header-logo.png" alt="" class="header__logo-img"></a> 
             </div>
 
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="item">
-                        <a href="#" class="item-link">Акційна пропозиція</a>
+                        <a href="#discount" class="item-link">Акційна пропозиція</a>
                     </li>
 
                     <li class="item">
-                        <a href="#" class="item-link">Обладнання</a>
+                        <a href="#products" class="item-link">Обладнання</a>
                     </li>
 
                     <li class="item">
-                        <a href="#" class="item-link">Обладнання</a>
+                        <a href="#law" class="item-link">Про Закон</a>
                     </li>
 
                     <li class="item">
-                        <a href="#" class="item-link">Контакти</a>
+                        <a href="#footer" class="item-link">Контакти</a>
                     </li>
                 </ul>
             </nav>
@@ -61,7 +61,7 @@
         </div>
     </header>
 
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="intro__text">
             <h1 class="title intro__title">Касове обладнання</h1>
             <p class="intro__subtitle">для всіх платників єдиного податку ІІ – IV груп</p>
@@ -78,7 +78,7 @@
         <div class="circle circle-big wow fadeIn"></div>
     </section>
 
-    <section class="about">
+    <section class="about" id="law">
         <div class="flex-container jc-space-between">
             <div class="about__text">
                 <h3 class="about__title">ПРО ЗАКОН</h3>
@@ -94,7 +94,7 @@
                 <a href="#" class="about__more">посилання на джерело</a>
             </div>
 
-            <div class="about__background">
+            <div class="about__background wow rotateInUpLeft" data-wow-duration="1s">
                 <img src="assets/images/about-background.png" alt="">
             </div>
         </div>
@@ -108,7 +108,7 @@
 
             <div class="choose__bullets">
                 <ul class="choose__bullets-list">
-                    <li class="item">
+                    <li class="item wow fadeIn" data-wow-delay="1s" data-wow-duration="0.4s">
                         <img src="assets/icons/bullets/icon-speed.svg" alt="">
                         <p class="item__title">Швидко</p>
                         <p class="item__description">
@@ -117,7 +117,7 @@
                         </p>
                     </li>
 
-                    <li class="item">
+                    <li class="item wow fadeIn" data-wow-delay="1.6s" data-wow-duration="0.4s">
                         <img src="assets/icons/bullets/icon-good.svg" alt="">
                         <p class="item__title">Зручно</p>
                         <p class="item__description">
@@ -126,13 +126,13 @@
                         </p>
                     </li>
 
-                    <li class="item">
+                    <li class="item wow fadeIn" data-wow-delay="3.2s" data-wow-duration="0.4s">
                         <img src="assets/icons/bullets/icon-info.svg" alt="">
                         <p class="item__title">Інформаційна
                             підтримка</p>
                     </li>
 
-                    <li class="item">
+                    <li class="item wow fadeIn" data-wow-delay="2s" data-wow-duration="0.4s">
                         <img src="assets/icons/bullets/icon-money.svg" alt="">
                         <p class="item__title">Доступно</p>
                         <p class="item__description">
@@ -140,7 +140,7 @@
                         </p>
                     </li>
 
-                    <li class="item">
+                    <li class="item wow fadeIn" data-wow-delay="2.6s" data-wow-duration="0.4s">
                         <img src="assets/icons/bullets/icon-settings.svg" alt="">
                         <p class="item__title">Сервіс</p>
                         <p class="item__description">
@@ -159,7 +159,7 @@
                 <h3 class="title">Нові категорії ФОП, які зобов'язані <br> використовувати РРО</h3>
             </div>
 
-            <article class="article wow fadeInUp">
+            <article class="article wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
                 <div class="article-wrapper">
                     <h5 class="article-title">До 1 жовтня 2020 р.</h5>
                     <div class="article-subtitle">
@@ -188,7 +188,7 @@
                 </div>
             </article>
 
-            <article class="article">
+            <article class="article wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
                 <ul class="article-wrapper">
                     <h5 class="article-title">З 1 Жовтня</h5>
 
@@ -298,7 +298,7 @@
             </div>
 
             <div class="description__background">
-                <img src="assets/images/description-bg.png" alt="">
+                <img src="assets/images/description-bg.png" class="wow fadeIn" data-wow-duration="1s" data-wow-duration="1s">
             </div>
         </div>
 
@@ -456,7 +456,7 @@
         </div>
     </div>
 
-    <section class="discount">
+    <section class="discount" id="discount">
         <div class="container">
             <article class="article article--discount">
                 <div class="article-wrapper">
@@ -486,7 +486,7 @@
         </div>
     </section>
 
-    <section class="products">
+    <section class="products" id="products">
         <div class="container">
             <h3 class="title">Обладнання / РРО</h3>
 
@@ -678,7 +678,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="flex-container jc-space-between ai-center">
             <div class="footer__text">
                 <h5 class="title">Контакти</h5>
@@ -699,7 +699,7 @@
                 </div>
 
                 <p class="work-our"><em>Години роботи:</em> пн - пт 9:00 - 18:00</p>
-                <button class="btn--lighten">Стати партнером</button>
+                <button class="btn--lighten"  id="footer-btn--partners">Стати партнером</button>
             </div>
 
             <div class="footer-logo">
@@ -709,7 +709,7 @@
     </footer>
 
 
-    <div class="modal modal__consultation undisplay">
+    <div class="modal modal__consultation">
         <div class="modal-container">
             <h3 class="title">Консультація з питань придбання</h3>
 
@@ -741,7 +741,7 @@
         </button>
     </div>
 
-    <div class="modal modal__partners undisplay">
+    <div class="modal modal__partners">
         <div class="modal-container">
             <h3 class="title">Стати партнером</h3>
 
@@ -777,6 +777,8 @@
             <img src="assets/icons/close.png" alt="">
         </button>
     </div>
+
+    <!-- <button id="up"><img src="assets/icons/arrows/arrow-up.png" alt=""></button> -->
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
