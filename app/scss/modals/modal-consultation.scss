@@ -28,11 +28,23 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
     }
+
+    @media screen and(max-width: 500px) {
+        margin: 4vh auto;
+
+        .modal-container {
+            padding: 30px 25px 30px;
+        }
+    }
 }
 
 .modal-container {
     position: relative;
     padding: 40px 74px 63px;
+
+    @media screen and(max-width: 477px) {
+        padding: 40px 30px 63px;
+    }
 }
 
 .modal__label {

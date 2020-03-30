@@ -1210,10 +1210,18 @@ a {
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 0.08em; }
+  @media screen and (max-width: 500px) {
+    .modal {
+      margin: 4vh auto; }
+      .modal .modal-container {
+        padding: 30px 25px 30px; } }
 
 .modal-container {
   position: relative;
   padding: 40px 74px 63px; }
+  @media screen and (max-width: 477px) {
+    .modal-container {
+      padding: 40px 30px 63px; } }
 
 .modal__label {
   padding-left: 30px;
