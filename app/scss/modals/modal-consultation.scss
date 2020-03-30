@@ -1,9 +1,8 @@
 .modal {
-    position: fixed;
-    // top: 10px;
-    left: calc(50% - 305px);
+    position: relative;
+    margin: 5vh auto;
     max-width: 610px;
-    width: 100%;
+    width: 90%;
     text-align: center;
     background-color: #fff;
     border-radius: 5px;
@@ -45,6 +44,10 @@
         font-weight: 900;
         color: #F92D2D;
     }
+
+    @media screen and(max-width: 670px) {
+        padding-left: 0;
+    }
 }
 
 .modal__input {
@@ -62,10 +65,10 @@
 
 
 .modal__show {
-    top: 40px;
+    top: 30px;
     visibility: visible !important;
     opacity: 1 !important;
-  }
+}
 
 .modal__close {
     position: absolute;
@@ -79,4 +82,13 @@
     &:hover {
         transform: rotate(90deg);
     }
+}
+
+.modal__buy {
+    margin: 0 auto;
+    margin-top: -1380px;
+}
+
+.modal__partners {
+    margin-top: -650px;
 }

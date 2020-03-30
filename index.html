@@ -14,7 +14,116 @@
 
 <body>
 
-    <div id="overlay"></div>
+    <div id="overlay">
+        <div class="modal modal__consultation">
+            <div class="modal-container">
+                <h3 class="title">Консультація з питань придбання</h3>
+    
+                <p class="subtitle">
+                    Будь ласка, заповніть форму
+                </p>
+    
+                <form action="#" method="POST" class="modal__form flex-row-vertical">
+                    <label class="modal__label">
+                        Ваше ім’я: <sup>*</sup>
+                        <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш телефон: <sup>*</sup>
+                        <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш e-mail:
+                        <input class="modal__input" type="email" placeholder="Ваш Email">
+                    </label>
+    
+                    <input class="btn" type="submit" value="Надіслати заявку">
+                </form>
+            </div>
+            <button class="modal__close">
+                <img src="assets/icons/close.png" alt="">
+            </button>
+        </div>
+    
+        <div class="modal modal__partners">
+            <div class="modal-container">
+                <h3 class="title">Стати партнером</h3>
+    
+                <p class="subtitle">
+                    Будь ласка, заповніть форму
+                </p>
+    
+                <form action="#" method="POST" class="modal__form flex-row-vertical">
+                    <label class="modal__label">
+                        Ваше ім’я: <sup>*</sup>
+                        <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш телефон: <sup>*</sup>
+                        <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                    </label>
+    
+                    <label class="modal__label">
+                        Назва компанії: <sup>*</sup>
+                        <input class="modal__input" type="tel" placeholder="Назва">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш e-mail:
+                        <input class="modal__input" type="email" placeholder="Ваш Email">
+                    </label>
+    
+                    <input class="btn" type="submit" value="Стати партнером">
+                </form>
+            </div>
+            <button class="modal__close">
+                <img src="assets/icons/close.png" alt="">
+            </button>
+        </div>
+    
+        <div class="modal modal__buy">
+            <div class="modal-container">
+                <h3 class="title">Для придбання</h3>
+    
+                <p class="subtitle">
+                    Будь ласка, заповніть форму
+                </p>
+    
+                <form action="#" method="POST" class="modal__form flex-row-vertical">
+                    <label class="modal__label">
+                        Ваше ім’я: <sup>*</sup>
+                        <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш телефон: <sup>*</sup>
+                        <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш e-mail:
+                        <input class="modal__input" type="email" placeholder="Ваш Email">
+                    </label>
+    
+                    <input class="btn" type="submit" value="Вiдправити">
+                </form>
+            </div>
+            <button class="modal__close">
+                <img src="assets/icons/close.png" alt="">
+            </button>
+        </div>
+
+        <div class="intro__modal-video undisplay">
+            <div class="modal__close">
+                <img src="assets/icons/close.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
     <header class="header">
         <div class="header-container">
             <div class="header__logo">
@@ -50,7 +159,7 @@
                 </div>
 
                 <div class="header__utility--phone">
-                    <a href="#"><img src="assets/icons/phone.svg" alt="" class="icon"></a>
+                    <a href="tel:+380501234567"><img src="assets/icons/phone.svg" alt="" class="icon"></a>
                 </div>
             </div>
 
@@ -103,12 +212,12 @@
     <section class="choose">
         <div class="flex-container ai-center jc-space-between full-height full-width">
             <div class="choose__title">
-                <h3 class="title">Чому потрібно звернутись саме до нас?</h3>
+                <h3 class="title wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="0.1s">Чому потрібно звернутись саме до нас?</h3>
             </div>
 
             <div class="choose__bullets">
-                <ul class="choose__bullets-list">
-                    <li class="item wow fadeIn" data-wow-delay="1s" data-wow-duration="0.4s">
+                <ul class="choose__bullets-list wow fadeIn" data-wow-delay="0.6s" data-wow-duration="0.1s">
+                    <li class="item">
                         <img src="assets/icons/bullets/icon-speed.svg" alt="">
                         <p class="item__title">Швидко</p>
                         <p class="item__description">
@@ -117,7 +226,7 @@
                         </p>
                     </li>
 
-                    <li class="item wow fadeIn" data-wow-delay="1.6s" data-wow-duration="0.4s">
+                    <li class="item w">
                         <img src="assets/icons/bullets/icon-good.svg" alt="">
                         <p class="item__title">Зручно</p>
                         <p class="item__description">
@@ -126,13 +235,13 @@
                         </p>
                     </li>
 
-                    <li class="item wow fadeIn" data-wow-delay="3.2s" data-wow-duration="0.4s">
+                    <li class="item w">
                         <img src="assets/icons/bullets/icon-info.svg" alt="">
                         <p class="item__title">Інформаційна
                             підтримка</p>
                     </li>
 
-                    <li class="item wow fadeIn" data-wow-delay="2s" data-wow-duration="0.4s">
+                    <li class="item">
                         <img src="assets/icons/bullets/icon-money.svg" alt="">
                         <p class="item__title">Доступно</p>
                         <p class="item__description">
@@ -140,7 +249,7 @@
                         </p>
                     </li>
 
-                    <li class="item wow fadeIn" data-wow-delay="2.6s" data-wow-duration="0.4s">
+                    <li class="item" >
                         <img src="assets/icons/bullets/icon-settings.svg" alt="">
                         <p class="item__title">Сервіс</p>
                         <p class="item__description">
@@ -285,9 +394,12 @@
     </section>
 
     <section class="description">
-        <h5 class="title title--description">Що таке РРО?</h5>
+        
         <div class="flex-container jc-space-between">
             <div class="description__text">
+                <h5 class="title title--description">Що таке РРО?</h5>
+                    <img src="assets/images/description-bg.png" class="descr__img-tablet wow fadeIn" data-wow-duration="1s" data-wow-duration="1s">
+                
                 <p class="description-definition">
                     Реєстратор розрахункових операцій (РРО) - пристрій або програмно-технічний комплекс, в якому
                     реалізовані фіскальні функції і який призначений для реєстрації розрахункових операцій при продажу
@@ -298,7 +410,7 @@
             </div>
 
             <div class="description__background">
-                <img src="assets/images/description-bg.png" class="wow fadeIn" data-wow-duration="1s" data-wow-duration="1s">
+                <img src="assets/images/description-bg.png" class="descr__img wow fadeIn" data-wow-duration="1s" data-wow-duration="1s">
             </div>
         </div>
 
@@ -564,7 +676,7 @@
 
                     <div class="btn-container">
                         <button class="btn--lighten" id="productConsult--1">Замовити консультацію</button>
-                        <button class="btn">Купити</button>
+                        <button class="btn" id="buy1">Купити</button>
                     </div>
 
                 </div>
@@ -611,7 +723,7 @@
 
                     <div class="btn-container">
                         <button class="btn--lighten" id="productConsult--2">Замовити консультацію</button>
-                        <button class="btn">Купити</button>
+                        <button class="btn" id="buy2">Купити</button>
                     </div>
 
                 </div>
@@ -698,7 +810,7 @@
 
                 </div>
 
-                <p class="work-our"><em>Години роботи:</em> пн - пт 9:00 - 18:00</p>
+                <p class="work-our"><span class="strong">Години роботи:</span> пн - пт 9:00 - 18:00</p>
                 <button class="btn--lighten"  id="footer-btn--partners">Стати партнером</button>
             </div>
 
@@ -709,74 +821,7 @@
     </footer>
 
 
-    <div class="modal modal__consultation">
-        <div class="modal-container">
-            <h3 class="title">Консультація з питань придбання</h3>
-
-            <p class="subtitle">
-                Будь ласка, заповніть форму
-            </p>
-
-            <form action="#" method="POST" class="modal__form flex-row-vertical">
-                <label class="modal__label">
-                    Ваше ім’я: <sup>*</sup>
-                    <input class="modal__input" type="text" placeholder="Ваше ім’я">
-                </label>
-
-                <label class="modal__label">
-                    Ваш телефон: <sup>*</sup>
-                    <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
-                </label>
-
-                <label class="modal__label">
-                    Ваш e-mail:
-                    <input class="modal__input" type="email" placeholder="Ваш Email">
-                </label>
-
-                <input class="btn" type="submit" value="Надіслати заявку">
-            </form>
-        </div>
-        <button class="modal__close">
-            <img src="assets/icons/close.png" alt="">
-        </button>
-    </div>
-
-    <div class="modal modal__partners">
-        <div class="modal-container">
-            <h3 class="title">Стати партнером</h3>
-
-            <p class="subtitle">
-                Будь ласка, заповніть форму
-            </p>
-
-            <form action="#" method="POST" class="modal__form flex-row-vertical">
-                <label class="modal__label">
-                    Ваше ім’я: <sup>*</sup>
-                    <input class="modal__input" type="text" placeholder="Ваше ім’я">
-                </label>
-
-                <label class="modal__label">
-                    Ваш телефон: <sup>*</sup>
-                    <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
-                </label>
-
-                <label class="modal__label">
-                    Назва компанії: <sup>*</sup>
-                    <input class="modal__input" type="tel" placeholder="Назва">
-                </label>
-
-                <label class="modal__label">
-                    Ваш e-mail:
-                    <input class="modal__input" type="email" placeholder="Ваш Email">
-                </label>
-
-                <input class="btn" type="submit" value="Стати партнером">
-            </form>
-        </div>
-        <button class="modal__close">
-            <img src="assets/icons/close.png" alt="">
-        </button>
-    </div>
+    
 
     <!-- <button id="up"><img src="assets/icons/arrows/arrow-up.png" alt=""></button> -->
 
