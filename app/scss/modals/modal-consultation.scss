@@ -3,6 +3,7 @@
     margin: 5vh auto;
     max-width: 610px;
     width: 90%;
+    height: 0;
     text-align: center;
     background-color: #fff;
     border-radius: 5px;
@@ -30,7 +31,7 @@
     }
 
     @media screen and(max-width: 500px) {
-        margin: 4vh auto;
+        margin: 4.3vh auto;
 
         .modal-container {
             padding: 30px 25px 30px;
@@ -80,6 +81,8 @@
     top: 30px;
     visibility: visible !important;
     opacity: 1 !important;
+    height: auto;
+    transition-delay: all 1s;
 }
 
 .modal__close {
@@ -94,13 +97,4 @@
     &:hover {
         transform: rotate(90deg);
     }
-}
-
-.modal__buy {
-    margin: 0 auto;
-    margin-top: -1380px;
-}
-
-.modal__partners {
-    margin-top: -650px;
 }

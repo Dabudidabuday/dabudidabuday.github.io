@@ -153,7 +153,7 @@ $(document).ready(function(){
 
 
       // Open modal Buttons (VIDEO)
-      const introPlay = document.querySelector("play");
+      const Play = document.querySelector("play");
 
 
       // Close modal widnows
@@ -161,7 +161,7 @@ $(document).ready(function(){
 
 
       // Video
-      const introVideo = document.querySelector(".intro__modal-video");
+      const Video = document.querySelector(".intro__modal-video");
 
 
       /**
@@ -186,7 +186,6 @@ $(document).ready(function(){
           overlay.classList.add("modal__show");
           window.classList.remove("undisplay");
           window.appendChild(iframe);
-          console.log(button);
         });
       };
 
@@ -202,8 +201,8 @@ $(document).ready(function(){
       };
 
       openVideoModal(
-        introPlay,
-        introVideo,
+        Play,
+        Video,
         "https://www.youtube.com/embed/Ev92DX9HlXI?autoplay=1"
       );
 
