@@ -767,7 +767,7 @@
 
     <section class="feedback">
         <div class="container">
-            <form action="#" method="POST" class="feedback__form">
+            <form action="#" method="POST" class="feedback__form" id="ajax_form">
                 <legend class="title feedback__form-title">Зв'яжіться з нами</legend>
                 <p class="feedback__form-subtitle">
                     Будь ласка, заповніть форму нижче та отримайте безкоштовну консультацію
@@ -785,10 +785,12 @@
                     <input type="email" class="form__input" placeholder="Ваш e-mail">
                 </label>
 
-                <button class="btn form__submit">Надіслати</button>
+                <button class="btn form__submit" id="feedbackBtn">Надіслати</button>
             </form>
         </div>
     </section>
+
+    <div id="result_form"></div>
 
     <footer class="footer" id="footer">
         <div class="flex-container jc-space-between ai-center">
@@ -829,6 +831,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="app/js/slick/slick.min.js"></script>
     <script src="app/js/wow.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="ajax.js"></script>
     <script>
         new WOW().init();
     </script>
