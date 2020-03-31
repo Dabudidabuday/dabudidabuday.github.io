@@ -1030,7 +1030,7 @@ a {
   left: 0; }
 
 .next {
-  left: 45%; }
+  left: 45.6%; }
 
 .prev--2 {
   left: 50%; }
@@ -1188,10 +1188,9 @@ a {
 
 .modal {
   position: relative;
-  margin: 5vh auto;
+  margin: 10vh auto;
   max-width: 610px;
   width: 90%;
-  height: 0;
   text-align: center;
   background-color: #fff;
   border-radius: 5px;
@@ -1199,8 +1198,8 @@ a {
   transition: all ease-in-out .3s;
   transition-delay: .2s;
   visibility: hidden;
-  opacity: 0;
-  top: 350px; }
+  display: none;
+  opacity: 0; }
   .modal .title {
     margin-bottom: 10px; }
   .modal .subtitle {
@@ -1249,6 +1248,7 @@ a {
 
 .modal__show {
   top: 30px;
+  display: block;
   visibility: visible !important;
   opacity: 1 !important;
   height: auto;
@@ -1280,7 +1280,7 @@ body {
   bottom: 0;
   left: 0;
   background-color: rgba(25, 25, 25, 0.7);
-  z-index: 9;
+  z-index: 50;
   visibility: hidden;
   opacity: 0;
   transition: all ease-in-out 0.5s; }

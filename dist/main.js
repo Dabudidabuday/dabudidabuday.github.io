@@ -48,6 +48,7 @@ const footerPartnersBtn = document.getElementById('footer-btn--partners');
 
 
 const modalCloseBtn = document.querySelector('.modal__close');
+const closeBuyBtn = document.querySelector('.close-buy-btn');
 
 
 
@@ -73,6 +74,19 @@ function modalClose(form) {
         }
     })
 };
+function modalCloseBuy(form) {
+    closeBuyBtn.addEventListener('click', function () {
+        overlay.classList.remove('modal__show');
+        form.classList.remove('modal__show');
+    });
+
+    window.addEventListener('click', function() {
+        if(event.target == overlay) { 
+            overlay.classList.remove("modal__show");
+            form.classList.remove("modal__show");
+        }
+    })
+};
 
 modalOpen(introBtn, modalConsultation);
 modalOpen(consultBtn, modalConsultation);
@@ -85,10 +99,10 @@ modalOpen(productbuy1, modalBuy);
 modalOpen(productbuy2, modalBuy);
 
 
-
 modalClose(modalPartners);
 modalClose(modalConsultation);
-modalClose(modalBuy);
+modalCloseBuy(modalBuy);
+
 
 /* 
 ** Header menu
@@ -152,59 +166,59 @@ $(document).ready(function(){
 
 
 
-      // Open modal Buttons (VIDEO)
-      const Play = document.querySelector("play");
+    //   // Open modal Buttons (VIDEO)
+    //   const Play = document.querySelector("play");
 
 
-      // Close modal widnows
-    //   const introCloseBtn = document.getElementById("intro-close");
+    //   // Close modal widnows
+    // //   const introCloseBtn = document.getElementById("intro-close");
 
 
-      // Video
-      const Video = document.querySelector(".intro__modal-video");
+    //   // Video
+    //   const Video = document.querySelector(".intro__modal-video");
 
 
-      /**
-       * @method openVideoModal
-       * @param button {HTMLElement}
-       * @param window {HTMLElement}
-       * @param url {String}
-       */
-      const openVideoModal = function(button, window, url) {
-        const iframe = document.createElement("iframe");
+    //   /**
+    //    * @method openVideoModal
+    //    * @param button {HTMLElement}
+    //    * @param window {HTMLElement}
+    //    * @param url {String}
+    //    */
+    //   const openVideoModal = function(button, window, url) {
+    //     const iframe = document.createElement("iframe");
 
-        iframe.className = "intro__iframe";
-        iframe.width = "100%";
-        iframe.height = "90%";
-        iframe.src = url;
-        iframe.frameborder = "0";
-        iframe.allow =
-          "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
-        iframe.allowfullscreen;
+    //     iframe.className = "intro__iframe";
+    //     iframe.width = "100%";
+    //     iframe.height = "90%";
+    //     iframe.src = url;
+    //     iframe.frameborder = "0";
+    //     iframe.allow =
+    //       "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+    //     iframe.allowfullscreen;
 
-        button.addEventListener("click", function() {
-          overlay.classList.add("modal__show");
-          window.classList.remove("undisplay");
-          window.appendChild(iframe);
-        });
-      };
+    //     button.addEventListener("click", function() {
+    //       overlay.classList.add("modal__show");
+    //       window.classList.remove("undisplay");
+    //       window.appendChild(iframe);
+    //     });
+    //   };
 
-      const modalVideoClose = function(button, video) {
-        button.addEventListener("click", function() {
-          const iframe = document.querySelector(".intro__iframe");
-          if (iframe) {
-            video.removeChild(iframe);
-          }
-          overlay.classList.add("undisplay");
-          video.classList.add("undisplay");
-        });
-      };
+    //   const modalVideoClose = function(button, video) {
+    //     button.addEventListener("click", function() {
+    //       const iframe = document.querySelector(".intro__iframe");
+    //       if (iframe) {
+    //         video.removeChild(iframe);
+    //       }
+    //       overlay.classList.add("undisplay");
+    //       video.classList.add("undisplay");
+    //     });
+    //   };
 
-      openVideoModal(
-        Play,
-        Video,
-        "https://www.youtube.com/embed/Ev92DX9HlXI?autoplay=1"
-      );
+    //   openVideoModal(
+    //     Play,
+    //     Video,
+    //     "https://www.youtube.com/embed/Ev92DX9HlXI?autoplay=1"
+    //   );
 
 
-      modalVideoClose(introCloseBtn, introVideo);
+    //   modalVideoClose(introCloseBtn, introVideo);

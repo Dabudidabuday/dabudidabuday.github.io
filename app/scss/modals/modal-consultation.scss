@@ -1,9 +1,8 @@
 .modal {
     position: relative;
-    margin: 5vh auto;
+    margin: 10vh auto;
     max-width: 610px;
     width: 90%;
-    height: 0;
     text-align: center;
     background-color: #fff;
     border-radius: 5px;
@@ -11,8 +10,9 @@
     transition: all ease-in-out .3s;
     transition-delay: .2s;
     visibility: hidden;
+    display: none;
     opacity: 0;
-    top: 350px;
+    // top: 350px;
 
     .title {
         margin-bottom: 10px;
@@ -79,6 +79,7 @@
 
 .modal__show {
     top: 30px;
+    display: block;
     visibility: visible !important;
     opacity: 1 !important;
     height: auto;
