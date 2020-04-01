@@ -151,7 +151,7 @@
 .product-title {
   font-weight: bold;
   line-height: 32px;
-  margin-bottom: 14px;
+  margin-bottom: 22px;
   font-size: 26px;
 }
 
@@ -219,7 +219,7 @@
 }
 
 .next {
-  left: 45%;
+  left: 45.6%;
 }
 
 .prev--2 {
@@ -230,14 +230,18 @@
   right: 0;
 }
 
+.product__description {
+  line-height: 26px;
+}
+
 .product__who {
-  padding-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 34px;
+  margin-bottom: 14px;
   font-weight: bold;
 }
 
 .product__who-list {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   padding-left: 20px;
   list-style-type: circle;
 
@@ -247,7 +251,7 @@
 }
 
 .product__price {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   font-weight: bold;
   font-size: 26px;
   line-height: 37px;

@@ -14,29 +14,154 @@
 
 <body>
 
-    <div class="undisplay" id="overlay"></div>
+    <div id="overlay">
+        <div class="modal modal__consultation">
+            <div class="modal-container">
+                <h3 class="title">Консультація з питань придбання</h3>
+    
+                <p class="subtitle">
+                    Будь ласка, заповніть форму
+                </p>
+    
+                <form action="#" method="POST" class="modal__form flex-row-vertical" id="ajax_form">
+                    <label class="modal__label">
+                        Ваше ім’я: <sup>*</sup>
+                        <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш телефон: <sup>*</sup>
+                        <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш e-mail:
+                        <input class="modal__input" type="email" placeholder="Ваш Email">
+                    </label>
+    
+                    <input class="btn" type="submit" value="Надіслати заявку" id="consultBtn">
+                </form>
+            </div>
+            <button class="modal__close">
+                <img src="assets/icons/close.png" alt="">
+            </button>
+        </div>
+
+        <div class="modal modal__partners">
+            <div class="modal-container">
+                <h3 class="title">Стати партнером</h3>
+    
+                <p class="subtitle">
+                    Будь ласка, заповніть форму
+                </p>
+    
+                <form action="#" method="POST" class="modal__form flex-row-vertical">
+                    <label class="modal__label">
+                        Ваше ім’я: <sup>*</sup>
+                        <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш телефон: <sup>*</sup>
+                        <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                    </label>
+    
+                    <label class="modal__label">
+                        Назва компанії: <sup>*</sup>
+                        <input class="modal__input" type="tel" placeholder="Назва">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш e-mail:
+                        <input class="modal__input" type="email" placeholder="Ваш Email">
+                    </label>
+    
+                    <input class="btn" type="submit" value="Стати партнером">
+                </form>
+            </div>
+            <button class="modal__close" id="close-Partners">
+                <img src="assets/icons/close.png" alt="">
+            </button>
+        </div>
+    
+        <div class="modal modal__buy">
+            <div class="modal-container">
+                <h3 class="title">Для придбання</h3>
+    
+                <p class="subtitle">
+                    Будь ласка, заповніть форму
+                </p>
+    
+                <form action="#" method="POST" class="modal__form flex-row-vertical">
+                    <label class="modal__label">
+                        Ваше ім’я: <sup>*</sup>
+                        <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш телефон: <sup>*</sup>
+                        <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                    </label>
+    
+                    <label class="modal__label">
+                        Ваш e-mail:
+                        <input class="modal__input" type="email" placeholder="Ваш Email">
+                    </label>
+    
+                    <input class="btn" type="submit" value="Вiдправити">
+                </form>
+            </div>
+            <button class="modal__close close-buy-btn">
+                <img src="assets/icons/close.png" alt="">
+            </button>
+        </div>
+
+        <div class="modal" id="result_form">
+            <div class="modal-container">
+                <h3 class="title">Дякуємо!</h3>
+    
+                <p class="subtitle">
+                    Данi успiшно вiдправленi
+                </p>
+                
+                <button class="btn">Вернутись на сайт</button>
+            </div>
+
+            <button class="modal__close" id="close-Partners">
+                <img src="assets/icons/close.png" alt="">
+            </button>
+        </div>
+
+        <div class="intro__modal-video undisplay">
+            <div class="modal__close">
+                <img src="assets/icons/close.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
     <header class="header">
         <div class="header-container">
             <div class="header__logo">
-                <img src="assets/images/header-logo.png" alt="" class="header__logo-img">
+               <a href="#intro"><img src="assets/images/header-logo.png" alt="" class="header__logo-img"></a> 
             </div>
 
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="item">
-                        <a href="#" class="item-link">Акційна пропозиція</a>
+                        <a href="#discount" class="item-link">Акційна пропозиція</a>
                     </li>
 
                     <li class="item">
-                        <a href="#" class="item-link">Обладнання</a>
+                        <a href="#products" class="item-link">Обладнання</a>
                     </li>
 
                     <li class="item">
-                        <a href="#" class="item-link">Обладнання</a>
+                        <a href="#law" class="item-link">Про Закон</a>
                     </li>
 
                     <li class="item">
-                        <a href="#" class="item-link">Контакти</a>
+                        <a href="#footer" class="item-link">Контакти</a>
                     </li>
                 </ul>
             </nav>
@@ -50,7 +175,7 @@
                 </div>
 
                 <div class="header__utility--phone">
-                    <a href="#"><img src="assets/icons/phone.svg" alt="" class="icon"></a>
+                    <a href="tel:+38044-228-74-83"><img src="assets/icons/phone.svg" alt="" class="icon"></a>
                 </div>
             </div>
 
@@ -61,7 +186,7 @@
         </div>
     </header>
 
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="intro__text">
             <h1 class="title intro__title">Касове обладнання</h1>
             <p class="intro__subtitle">для всіх платників єдиного податку ІІ – IV груп</p>
@@ -78,7 +203,7 @@
         <div class="circle circle-big wow fadeIn"></div>
     </section>
 
-    <section class="about">
+    <section class="about" id="law">
         <div class="flex-container jc-space-between">
             <div class="about__text">
                 <h3 class="about__title">ПРО ЗАКОН</h3>
@@ -91,10 +216,10 @@
                     2020-2021 рр.
                 </p>
 
-                <a href="#" class="about__more">посилання на джерело</a>
+                <a href="https://zakon.rada.gov.ua/laws/show/128-20#n6" class="about__more">посилання на джерело</a>
             </div>
 
-            <div class="about__background">
+            <div class="about__background wow rotateInUpLeft" data-wow-duration="1s">
                 <img src="assets/images/about-background.png" alt="">
             </div>
         </div>
@@ -103,11 +228,11 @@
     <section class="choose">
         <div class="flex-container ai-center jc-space-between full-height full-width">
             <div class="choose__title">
-                <h3 class="title">Чому потрібно звернутись саме до нас?</h3>
+                <h3 class="title wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="0.1s">Чому потрібно звернутись саме до нас?</h3>
             </div>
 
             <div class="choose__bullets">
-                <ul class="choose__bullets-list">
+                <ul class="choose__bullets-list wow fadeIn" data-wow-delay="0.6s" data-wow-duration="0.8s">
                     <li class="item">
                         <img src="assets/icons/bullets/icon-speed.svg" alt="">
                         <p class="item__title">Швидко</p>
@@ -117,7 +242,7 @@
                         </p>
                     </li>
 
-                    <li class="item">
+                    <li class="item w">
                         <img src="assets/icons/bullets/icon-good.svg" alt="">
                         <p class="item__title">Зручно</p>
                         <p class="item__description">
@@ -126,7 +251,7 @@
                         </p>
                     </li>
 
-                    <li class="item">
+                    <li class="item w">
                         <img src="assets/icons/bullets/icon-info.svg" alt="">
                         <p class="item__title">Інформаційна
                             підтримка</p>
@@ -140,7 +265,7 @@
                         </p>
                     </li>
 
-                    <li class="item">
+                    <li class="item" >
                         <img src="assets/icons/bullets/icon-settings.svg" alt="">
                         <p class="item__title">Сервіс</p>
                         <p class="item__description">
@@ -159,7 +284,7 @@
                 <h3 class="title">Нові категорії ФОП, які зобов'язані <br> використовувати РРО</h3>
             </div>
 
-            <article class="article wow fadeInUp">
+            <article class="article wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
                 <div class="article-wrapper">
                     <h5 class="article-title">До 1 жовтня 2020 р.</h5>
                     <div class="article-subtitle">
@@ -188,7 +313,7 @@
                 </div>
             </article>
 
-            <article class="article">
+            <article class="article wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
                 <ul class="article-wrapper">
                     <h5 class="article-title">З 1 Жовтня</h5>
 
@@ -200,9 +325,8 @@
                     </div>
 
                     <div class="article-description">
-                        у яких обсяг доходу перевищує 1 мільйон гривень протягом календарного року
-                        та ФОП другої - четвертої груп, які здійснюють:
-
+                        1) у яких обсяг доходу перевищує 1 млн грн протягом календарного року <br>
+                        2) у яких обсяг доходу НЕ перевищує 1 млн грн (ФОП 2,3,4 груп), які здійснюють:
                     </div>
 
                     <ul class="article__bullet-list">
@@ -285,9 +409,12 @@
     </section>
 
     <section class="description">
-        <h5 class="title title--description">Що таке РРО?</h5>
+        
         <div class="flex-container jc-space-between">
             <div class="description__text">
+                <h5 class="title title--description">Що таке РРО?</h5>
+                    <img src="assets/images/description-bg.png" class="descr__img-tablet wow fadeIn" data-wow-duration="1s" data-wow-duration="1s">
+                
                 <p class="description-definition">
                     Реєстратор розрахункових операцій (РРО) - пристрій або програмно-технічний комплекс, в якому
                     реалізовані фіскальні функції і який призначений для реєстрації розрахункових операцій при продажу
@@ -298,7 +425,7 @@
             </div>
 
             <div class="description__background">
-                <img src="assets/images/description-bg.png" alt="">
+                <img src="assets/images/description-bg.png" class="descr__img wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
             </div>
         </div>
 
@@ -365,7 +492,7 @@
 
     <section class="news">
         <div class="container">
-            <article class="article">
+            <article class="article wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
                 <div class="article-wrapper article-wrapper--wide">
                     <h5 class="article-title">З 19 квітня 2020</h5>
                     <p class="article-subtitle">
@@ -456,14 +583,15 @@
         </div>
     </div>
 
-    <section class="discount">
+    <section class="discount" id="discount">
         <div class="container">
             <article class="article article--discount">
                 <div class="article-wrapper">
-                    <h5 class="title">Акційна пропозиція</h5>
+                    <h5 class="title">Акція!!!</h5>
+                    <h5 class="title">Найкраще рішення для курьерської доставки</h5>
 
                     <p class="discount__subtitle">
-                        до 10 квітня 2020 р.
+                        до 30 квітня 2020 р.
                     </p>
 
                     <p class="discount__description">
@@ -471,10 +599,10 @@
                         готовий до
                         роботи, зареєстрований
                         та введений в
-                        експлуатацію. ви просто вмикаєте та починаєте працювати за наданою нами інструкцією. Все просто!
+                        експлуатацію. Ви просто вмикаєте та починаєте працювати за наданою нами інструкцією. Все просто!
                     </p>
 
-                    <p class="price">Цена: 3 980 грн</p>
+                    <p class="price">Цiна: 4 390 грн</p>
 
                     <p class="note">
                         * Пропозиція дійсна за умови заключення сервісного контракту.
@@ -486,7 +614,7 @@
         </div>
     </section>
 
-    <section class="products">
+    <section class="products" id="products">
         <div class="container">
             <h3 class="title">Обладнання / РРО</h3>
 
@@ -494,15 +622,59 @@
 
                 <div class="product__card-slider mr-36" id="product__slider-1">
                     <div class="slider-item">
-                        <img src="assets/images/products/product-1.png" alt="" class="item-img">
+                        <img src="assets/images/products/product-1.jpg" alt="" class="item-img">
                     </div>
 
                     <div class="slider-item">
-                        <img src="assets/images/products/product-2.png" alt="" class="item-img">
+                        <img src="assets/images/products/product-2.jpg" alt="" class="item-img">
                     </div>
 
                     <div class="slider-item">
-                        <img src="assets/images/products/product-1.png" alt="" class="item-img">
+                        <img src="assets/images/products/product-3.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-4.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-5.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-6.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-7.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-8.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-9.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-10.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-11.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-12.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-13.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-14.jpg" alt="" class="item-img">
                     </div>
                 </div>
 
@@ -559,12 +731,12 @@
                     </ul>
 
                     <div class="product__price">
-                        <span class="price-title">Цiна: </span> <span class="price-cost">4 900 грн</span>
+                        <span class="price-title">Цiна: </span> <span class="price-cost">4 950 грн</span>
                     </div>
 
                     <div class="btn-container">
                         <button class="btn--lighten" id="productConsult--1">Замовити консультацію</button>
-                        <button class="btn">Купити</button>
+                        <button class="btn" id="buy1">Купити</button>
                     </div>
 
                 </div>
@@ -606,27 +778,71 @@
                     </ul>
 
                     <div class="product__price">
-                        <span class="price-title">Цiна: </span> <span class="price-cost">4 900 грн</span>
+                        <span class="price-title">Цiна: </span> <span class="price-cost">4 800 грн</span>
                     </div>
 
                     <div class="btn-container">
                         <button class="btn--lighten" id="productConsult--2">Замовити консультацію</button>
-                        <button class="btn">Купити</button>
+                        <button class="btn" id="buy2">Купити</button>
                     </div>
 
                 </div>
 
                 <div class="product__card-slider" id="product__slider-2">
                     <div class="slider-item">
-                        <img src="assets/images/products/product-1.png" alt="" class="item-img">
+                        <img src="assets/images/products/product-14.jpg" alt="" class="item-img">
                     </div>
 
                     <div class="slider-item">
-                        <img src="assets/images/products/product-2.png" alt="" class="item-img">
+                        <img src="assets/images/products/product-13.jpg" alt="" class="item-img">
                     </div>
 
                     <div class="slider-item">
-                        <img src="assets/images/products/product-1.png" alt="" class="item-img">
+                        <img src="assets/images/products/product-12.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-11.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-10.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-9.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-8.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-7.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-6.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-5.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-4.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-3.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-2.jpg" alt="" class="item-img">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="assets/images/products/product-1.jpg" alt="" class="item-img">
                     </div>
                 </div>
 
@@ -655,30 +871,32 @@
 
     <section class="feedback">
         <div class="container">
-            <form action="#" method="POST" class="feedback__form">
+            <form action="#" method="POST" class="feedback__form" id="ajax_form">
                 <legend class="title feedback__form-title">Зв'яжіться з нами</legend>
                 <p class="feedback__form-subtitle">
                     Будь ласка, заповніть форму нижче та отримайте безкоштовну консультацію
                 </p>
 
                 <label>
-                    <input type="text" class="form__input">
+                    <input type="text" class="form__input" placeholder="Ваше ім’я">
                 </label>
 
                 <label>
-                    <input type="tel" class="form__input">
+                    <input type="tel" class="form__input" placeholder="Ваш телефон">
                 </label>
 
                 <label>
-                    <input type="email" class="form__input">
+                    <input type="email" class="form__input" placeholder="Ваш e-mail">
                 </label>
 
-                <button class="btn form__submit">Надіслати</button>
+                <button class="btn form__submit" id="feedbackBtn">Надіслати</button>
             </form>
         </div>
     </section>
 
-    <footer class="footer">
+    <div id="result_form"></div>
+
+    <footer class="footer" id="footer">
         <div class="flex-container jc-space-between ai-center">
             <div class="footer__text">
                 <h5 class="title">Контакти</h5>
@@ -688,18 +906,17 @@
                 </p>
 
                 <div class="footer__contacts">
-                    <p class="number"><span class="strong">Телефон: </span>044-228-74-83
-                    </p>
+                    <a href="tel:044-228-74-83" class="number"><span class="strong">Телефон: </span>044-228-74-83</a>
 
                     <div class="email">
                         <span class="strong">Пошта: </span>
-                        <p class="email-text">rro@fnt.com.ua</p>
+                        <a href="mailto:rro@fnt.com.ua" class="email-text">rro@fnt.com.ua</a>
                     </div>
 
                 </div>
 
-                <p class="work-our"><em>Години роботи:</em> пн - пт 9:00 - 18:00</p>
-                <button class="btn--lighten">Стати партнером</button>
+                <p class="work-our"><span class="strong">Години роботи:</span> пн - пт 9:00 - 18:00</p>
+                <button class="btn--lighten"  id="footer-btn--partners">Стати партнером</button>
             </div>
 
             <div class="footer-logo">
@@ -709,79 +926,16 @@
     </footer>
 
 
-    <div class="modal modal__consultation undisplay">
-        <div class="modal-container">
-            <h3 class="title">Консультація з питань придбання</h3>
+    
 
-            <p class="subtitle">
-                Будь ласка, заповніть форму
-            </p>
+    <!-- <button id="up"><img src="assets/icons/arrows/arrow-up.png" alt=""></button> -->
 
-            <form action="#" method="POST" class="modal__form flex-row-vertical">
-                <label class="modal__label">
-                    Ваше ім’я: <sup>*</sup>
-                    <input class="modal__input" type="text" placeholder="Ваше ім’я">
-                </label>
-
-                <label class="modal__label">
-                    Ваш телефон: <sup>*</sup>
-                    <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
-                </label>
-
-                <label class="modal__label">
-                    Ваш e-mail:
-                    <input class="modal__input" type="email" placeholder="Ваш Email">
-                </label>
-
-                <input class="btn" type="submit" value="Надіслати заявку">
-            </form>
-        </div>
-        <button class="modal__close">
-            <img src="assets/icons/close.png" alt="">
-        </button>
-    </div>
-
-    <div class="modal modal__partners undisplay">
-        <div class="modal-container">
-            <h3 class="title">Стати партнером</h3>
-
-            <p class="subtitle">
-                Будь ласка, заповніть форму
-            </p>
-
-            <form action="#" method="POST" class="modal__form flex-row-vertical">
-                <label class="modal__label">
-                    Ваше ім’я: <sup>*</sup>
-                    <input class="modal__input" type="text" placeholder="Ваше ім’я">
-                </label>
-
-                <label class="modal__label">
-                    Ваш телефон: <sup>*</sup>
-                    <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
-                </label>
-
-                <label class="modal__label">
-                    Назва компанії: <sup>*</sup>
-                    <input class="modal__input" type="tel" placeholder="Назва">
-                </label>
-
-                <label class="modal__label">
-                    Ваш e-mail:
-                    <input class="modal__input" type="email" placeholder="Ваш Email">
-                </label>
-
-                <input class="btn" type="submit" value="Стати партнером">
-            </form>
-        </div>
-        <button class="modal__close">
-            <img src="assets/icons/close.png" alt="">
-        </button>
-    </div>
-
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="app/js/slick/slick.min.js"></script>
     <script src="app/js/wow.min.js"></script>
+    <script src="ajax.js"></script>
     <script>
         new WOW().init();
     </script>

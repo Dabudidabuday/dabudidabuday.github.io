@@ -263,7 +263,7 @@ a {
   cursor: pointer;
   transition: ease-in-out .2s; }
   .btn:hover, .btn:focus {
-    box-shadow: inset -20.5em 0 0 0 #39cdff, inset 20.5em 0 0 0 #39cdff; }
+    box-shadow: inset -20.5em 0 0 0 #39cdff, inset 20.5em 0 0 0 #39cdff; }
 
 .btn--lighten {
   font-size: 14px;
@@ -288,8 +288,14 @@ a {
   font-weight: bold; }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
   border-bottom: 2px solid #EDEDED;
-  z-index: 4; }
+  z-index: 4;
+  z-index: 10; }
 
 .header-container {
   position: relative;
@@ -403,12 +409,13 @@ a {
       opacity: 1; }
   .header__nav-list {
     position: fixed;
-    top: 0;
-    left: calc(50% - 75px);
+    top: 50px;
+    left: calc(50% - 120px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50%; }
+    height: 50%;
+    font-size: 26px; }
     .header__nav-list li.item {
       margin-right: 0 !important;
       margin-top: 60px; } }
@@ -440,7 +447,8 @@ a {
   display: flex;
   line-height: 50px; }
   .footer__contacts .number {
-    margin-right: 50px; }
+    margin-right: 50px;
+    color: #1B3344; }
     @media screen and (max-width: 510px) {
       .footer__contacts .number {
         margin-right: 0; } }
@@ -733,12 +741,23 @@ a {
     .description .description__background img {
       width: 90%; } }
 
-.description__text {
-  margin-top: 55px;
-  margin-bottom: 33px; }
+.descr__img-tablet {
+  display: none; }
+
+@media screen and (max-width: 960px) {
+  .descr__img-tablet {
+    padding-bottom: 20px;
+    display: block;
+    visibility: visible;
+    margin: 0 auto; }
+  .description__background img {
+    display: none; } }
 
 .title--description {
-  padding-left: 80px; }
+  margin-bottom: 55px; }
+
+.description__text {
+  margin-bottom: 33px; }
 
 .description-definition {
   line-height: 34px;
@@ -957,7 +976,7 @@ a {
 .product-title {
   font-weight: bold;
   line-height: 32px;
-  margin-bottom: 14px;
+  margin-bottom: 22px;
   font-size: 26px; }
 
 .btn-container .btn {
@@ -1012,7 +1031,7 @@ a {
   left: 0; }
 
 .next {
-  left: 45%; }
+  left: 45.6%; }
 
 .prev--2 {
   left: 50%; }
@@ -1020,20 +1039,23 @@ a {
 .next--2 {
   right: 0; }
 
+.product__description {
+  line-height: 26px; }
+
 .product__who {
-  padding-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 34px;
+  margin-bottom: 14px;
   font-weight: bold; }
 
 .product__who-list {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   padding-left: 20px;
   list-style-type: circle; }
   .product__who-list .item {
     line-height: 25px; }
 
 .product__price {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   font-weight: bold;
   font-size: 26px;
   line-height: 37px;
@@ -1166,15 +1188,19 @@ a {
     line-height: 26px; }
 
 .modal {
-  position: fixed;
-  top: 10px;
-  left: calc(50% - 305px);
+  position: relative;
+  margin: 10vh auto;
   max-width: 610px;
-  width: 100%;
+  width: 90%;
   text-align: center;
   background-color: #fff;
   border-radius: 5px;
-  z-index: 100; }
+  z-index: 100;
+  transition: all ease-in-out .3s;
+  transition-delay: .2s;
+  visibility: hidden;
+  display: none;
+  opacity: 0; }
   .modal .title {
     margin-bottom: 10px; }
   .modal .subtitle {
@@ -1185,10 +1211,18 @@ a {
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 0.08em; }
+  @media screen and (max-width: 500px) {
+    .modal {
+      margin: 4.3vh auto; }
+      .modal .modal-container {
+        padding: 30px 25px 30px; } }
 
 .modal-container {
   position: relative;
   padding: 40px 74px 63px; }
+  @media screen and (max-width: 477px) {
+    .modal-container {
+      padding: 40px 30px 63px; } }
 
 .modal__label {
   padding-left: 30px;
@@ -1197,6 +1231,9 @@ a {
   .modal__label sup {
     font-weight: 900;
     color: #F92D2D; }
+  @media screen and (max-width: 670px) {
+    .modal__label {
+      padding-left: 0; } }
 
 .modal__input {
   margin-top: 10px;
@@ -1210,8 +1247,13 @@ a {
   border: 2px solid #E3EFF8;
   border-radius: 5px; }
 
-.modal__partners {
-  top: 0px; }
+.modal__show {
+  top: 30px;
+  display: block;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto;
+  transition-delay: all 1s; }
 
 .modal__close {
   position: absolute;
@@ -1239,5 +1281,14 @@ body {
   bottom: 0;
   left: 0;
   background-color: rgba(25, 25, 25, 0.7);
-  z-index: 9;
-  transition: all 1s; }
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in-out 0.5s; }
+
+.intro__modal-video {
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  height: 95%;
+  z-index: 1000; }

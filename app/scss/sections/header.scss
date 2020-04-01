@@ -1,6 +1,12 @@
 .header {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
   border-bottom: 2px solid #EDEDED;
   z-index: 4;
+  z-index: 10;
 }
 
 .header-container {
@@ -155,12 +161,13 @@ margin-right: 40px;
 
   .header__nav-list {
     position: fixed;
-    top: 0;
-    left: calc(50% - 75px);
+    top: 50px;
+    left: calc(50% - 120px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 50%;
+    font-size: 26px;
 
 
     li.item {

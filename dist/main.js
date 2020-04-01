@@ -24,21 +24,31 @@ $(document).ready(function () {
 // 'use strict';
 
 // OVERLAY
-let overlay = document.querySelector('#overlay');
+const overlay = document.getElementById('overlay');
 
 // MODAL WINDOWS
-let modalPartners = document.querySelector('.modal__partners');
-let modalConsultation = document.querySelector('.modal__consultation');
+const modalPartners = document.querySelector('.modal__partners');
+const modalConsultation = document.querySelector('.modal__consultation');
+const modalBuy = document.querySelector('.modal__buy');
+
 
 // MODAL OPEN BUTTONS
-let introBtn = document.querySelector('.btn--intro');
-let consultBtn = document.getElementById('consultBtn');
-let discountBtn = document.getElementById('discountBtn');
-let productConsult1 = document.getElementById('productConsult--1');
-let productConsult2 = document.getElementById('productConsult--2');
+const introBtn = document.querySelector('.btn--intro');
+const consultBtn = document.getElementById('consultBtn');
+const discountBtn = document.getElementById('discountBtn');
 
 
-let modalCloseBtn = document.querySelector('.modal__close');
+const productConsult1 = document.getElementById('productConsult--1');
+const productConsult2 = document.getElementById('productConsult--2');
+const productbuy1 = document.getElementById('buy1');
+const productbuy2 = document.getElementById('buy2');
+
+
+const footerPartnersBtn = document.getElementById('footer-btn--partners');
+
+
+const modalCloseBtn = document.querySelector('.modal__close');
+const closeBuyBtn = document.querySelector('.close-buy-btn');
 
 
 
@@ -46,39 +56,53 @@ let modalCloseBtn = document.querySelector('.modal__close');
 
 function modalOpen(button, form) {
     button.addEventListener('click', function () {
-        overlay.classList.remove('undisplay');
-        form.classList.remove('undisplay');
+        overlay.classList.add('modal__show');
+        form.classList.add('modal__show');
     })
 };
 
 function modalClose(form) {
     modalCloseBtn.addEventListener('click', function () {
-        overlay.classList.add('undisplay');
-        form.classList.add('undisplay');
+        overlay.classList.remove('modal__show');
+        form.classList.remove('modal__show');
     });
 
-    window.onclick = function (event) {
-        if (event.target == overlay) {
-            overlay.classList.add("undisplay");
-            form.classList.add("undisplay");
+    window.addEventListener('click', function() {
+        if(event.target == overlay) { 
+            overlay.classList.remove("modal__show");
+            form.classList.remove("modal__show");
         }
-    };
+    })
+};
+function modalCloseBuy(form) {
+    closeBuyBtn.addEventListener('click', function () {
+        overlay.classList.remove('modal__show');
+        form.classList.remove('modal__show');
+    });
+
+    window.addEventListener('click', function() {
+        if(event.target == overlay) { 
+            overlay.classList.remove("modal__show");
+            form.classList.remove("modal__show");
+        }
+    })
 };
 
-<<<<<<< HEAD
 modalOpen(introBtn, modalConsultation);
-=======
-modalOpen(introBtn, modalPartners);
->>>>>>> 95b1fe04b501202343307d339809b17a7ad829b7
 modalOpen(consultBtn, modalConsultation);
 modalOpen(discountBtn, modalConsultation);
 modalOpen(productConsult1, modalConsultation);
 modalOpen(productConsult2, modalConsultation);
+modalOpen(footerPartnersBtn, modalPartners);
 
+modalOpen(productbuy1, modalBuy);
+modalOpen(productbuy2, modalBuy);
 
 
 modalClose(modalPartners);
 modalClose(modalConsultation);
+modalCloseBuy(modalBuy);
+
 
 /* 
 ** Header menu
@@ -92,9 +116,109 @@ toggleMenuBtn.addEventListener('click', function () {
     toggleMenuBtn.classList.toggle('show');
 })
 
+$(".header__nav-list li a").on("click", function () {
+    // $(".asterion-offcanvas-wrap").removeClass("active");
+    $(".header__nav").removeClass('show');
+    $(".header__burger").removeClass('show');
+    // $(".header__nav").removeClass('show');
+ 
+});
+
+
+
+$(document).ready(function(){
+    $("a[href*=#]").on("click", function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top-=60
+        }, 500);
+        e.preventDefault();
+        return false;
+    });
+});
+
+
+(function($) {
+    $(function() {
+    
+        $('#up').click(function() {
+            $('html, body').animate({scrollTop: 0},500);
+            return false;
+        })
+    
+    })
+    })(jQuery)
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    //   // Open modal Buttons (VIDEO)
+    //   const Play = document.querySelector("play");
+
+
+    //   // Close modal widnows
+    // //   const introCloseBtn = document.getElementById("intro-close");
+
+
+    //   // Video
+    //   const Video = document.querySelector(".intro__modal-video");
+
+
+    //   /**
+    //    * @method openVideoModal
+    //    * @param button {HTMLElement}
+    //    * @param window {HTMLElement}
+    //    * @param url {String}
+    //    */
+    //   const openVideoModal = function(button, window, url) {
+    //     const iframe = document.createElement("iframe");
+
+    //     iframe.className = "intro__iframe";
+    //     iframe.width = "100%";
+    //     iframe.height = "90%";
+    //     iframe.src = url;
+    //     iframe.frameborder = "0";
+    //     iframe.allow =
+    //       "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+    //     iframe.allowfullscreen;
+
+    //     button.addEventListener("click", function() {
+    //       overlay.classList.add("modal__show");
+    //       window.classList.remove("undisplay");
+    //       window.appendChild(iframe);
+    //     });
+    //   };
+
+    //   const modalVideoClose = function(button, video) {
+    //     button.addEventListener("click", function() {
+    //       const iframe = document.querySelector(".intro__iframe");
+    //       if (iframe) {
+    //         video.removeChild(iframe);
+    //       }
+    //       overlay.classList.add("undisplay");
+    //       video.classList.add("undisplay");
+    //     });
+    //   };
+
+    //   openVideoModal(
+    //     Play,
+    //     Video,
+    //     "https://www.youtube.com/embed/Ev92DX9HlXI?autoplay=1"
+    //   );
+
+
+    //   modalVideoClose(introCloseBtn, introVideo);
