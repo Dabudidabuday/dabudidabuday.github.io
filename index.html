@@ -23,7 +23,7 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="#" method="POST" class="modal__form flex-row-vertical">
+                <form action="#" method="POST" class="modal__form flex-row-vertical" id="ajax_form">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
                         <input class="modal__input" type="text" placeholder="Ваше ім’я">
@@ -39,7 +39,7 @@
                         <input class="modal__input" type="email" placeholder="Ваш Email">
                     </label>
     
-                    <input class="btn" type="submit" value="Надіслати заявку">
+                    <input class="btn" type="submit" value="Надіслати заявку" id="consultBtn">
                 </form>
             </div>
             <button class="modal__close">
@@ -112,6 +112,22 @@
                 </form>
             </div>
             <button class="modal__close close-buy-btn">
+                <img src="assets/icons/close.png" alt="">
+            </button>
+        </div>
+
+        <div class="modal" id="result_form">
+            <div class="modal-container">
+                <h3 class="title">Дякуємо!</h3>
+    
+                <p class="subtitle">
+                    Данi успiшно вiдправленi
+                </p>
+                
+                <button class="btn">Вернутись на сайт</button>
+            </div>
+
+            <button class="modal__close" id="close-Partners">
                 <img src="assets/icons/close.png" alt="">
             </button>
         </div>
@@ -200,7 +216,7 @@
                     2020-2021 рр.
                 </p>
 
-                <a href="https://zakon.rada.gov.ua/ laws/show/128-20#n6" class="about__more">посилання на джерело</a>
+                <a href="https://zakon.rada.gov.ua/laws/show/128-20#n6" class="about__more">посилання на джерело</a>
             </div>
 
             <div class="about__background wow rotateInUpLeft" data-wow-duration="1s">
