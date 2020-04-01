@@ -15,7 +15,7 @@
 <body>
 
     <div id="overlay">
-        <div class="modal modal__consultation">
+        <div class="modal modal__consultation" id="intro-modal">
             <div class="modal-container">
                 <h3 class="title">Консультація з питань придбання</h3>
     
@@ -23,20 +23,21 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="#" method="POST" class="modal__form flex-row-vertical" id="ajax_form">
+                <form action="/mail.php" class="modal__form flex-row-vertical" id="ajax_form">
+                    <input type="hidden" name="title" value="Консультация с главного экрана">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
-                        <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                        <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я">
                     </label>
     
                     <label class="modal__label">
                         Ваш телефон: <sup>*</sup>
-                        <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                        <input class="modal__input" name="phone" type="tel" placeholder="+38 099 999 99 99">
                     </label>
     
                     <label class="modal__label">
                         Ваш e-mail:
-                        <input class="modal__input" type="email" placeholder="Ваш Email">
+                        <input class="modal__input" name="email" type="email" placeholder="Ваш Email">
                     </label>
     
                     <input class="btn" type="submit" value="Надіслати заявку" id="consultBtn">
@@ -116,7 +117,7 @@
             </button>
         </div>
 
-        <div class="modal" id="result_form">
+        <div class="modal" id="form-success">
             <div class="modal-container">
                 <h3 class="title">Дякуємо!</h3>
     
