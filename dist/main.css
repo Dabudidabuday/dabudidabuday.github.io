@@ -447,7 +447,8 @@ a {
   display: flex;
   line-height: 50px; }
   .footer__contacts .number {
-    margin-right: 50px; }
+    margin-right: 50px;
+    color: #1B3344; }
     @media screen and (max-width: 510px) {
       .footer__contacts .number {
         margin-right: 0; } }
