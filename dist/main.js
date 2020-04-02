@@ -28,6 +28,7 @@ $(document).ready(function () {
 const feedbackBtn = document.getElementById('feedbackBtn');
 const formSuccess = document.getElementById('form-success');
 feedbackBtn.addEventListener('click', function() {
+    
     overlay.classList.add('modal__show');
     formSuccess.classList.add('modal__show');
 })
