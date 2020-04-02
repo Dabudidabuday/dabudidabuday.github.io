@@ -35,7 +35,7 @@ function watcher() {
     series(compileStyles, browserSync.reload)
   );
   watch("app/js/**/*.js").on("change", series(compileJs, browserSync.reload));
-  watch("index.html").on("change", browserSync.reload);
+  watch("index.php").on("change", browserSync.reload);
 }
 
 exports.run = series(compileStyles, compileJs, watcher);

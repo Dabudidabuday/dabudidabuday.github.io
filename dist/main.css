@@ -263,7 +263,7 @@ a {
   cursor: pointer;
   transition: ease-in-out .2s; }
   .btn:hover, .btn:focus {
-    box-shadow: inset -20.5em 0 0 0 #39cdff, inset 20.5em 0 0 0 #39cdff; }
+    box-shadow: inset -20.5em 0 0 0 #39cdff, inset 20.5em 0 0 0 #39cdff; }
 
 .btn--lighten {
   font-size: 14px;
@@ -1248,7 +1248,6 @@ a {
   border-radius: 5px; }
 
 .modal__show {
-  top: 30px;
   display: block;
   visibility: visible !important;
   opacity: 1 !important;
@@ -1265,6 +1264,13 @@ a {
   transition: .2s; }
   .modal__close:hover {
     transform: rotate(90deg); }
+
+.title--sucess {
+  margin-bottom: 50px; }
+
+.subtitle--success {
+  margin-bottom: 50px;
+  font-size: 30px; }
 
 * {
   outline: none; }

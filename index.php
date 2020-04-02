@@ -56,7 +56,8 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="#" method="POST" class="modal__form flex-row-vertical">
+                <form action="/mail.php" method="POST" class="modal__form flex-row-vertical" id="ajax_partners">
+                    <input type="hidden" name="title" value="Подвал - Стать партнером">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
                         <input class="modal__input" type="text" placeholder="Ваше ім’я">
@@ -93,7 +94,8 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="#" method="POST" class="modal__form flex-row-vertical">
+                <form action="/mail.php" method="POST" class="modal__form flex-row-vertical" id="ajax_buy">
+                    <input type="hidden" name="title" value="РРО - купить">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
                         <input class="modal__input" type="text" placeholder="Ваше ім’я">
@@ -119,18 +121,14 @@
 
         <div class="modal" id="form-success">
             <div class="modal-container">
-                <h3 class="title">Дякуємо!</h3>
+                <h3 class="title title--success">Дякуємо!</h3>
     
-                <p class="subtitle">
+                <p class="subtitle subtitle--success">
                     Данi успiшно вiдправленi
                 </p>
                 
-                <button class="btn">Вернутись на сайт</button>
+                <button class="btn success__back-btn">Вернутись на сайт</button>
             </div>
-
-            <button class="modal__close" id="close-Partners">
-                <img src="assets/icons/close.png" alt="">
-            </button>
         </div>
 
         <div class="intro__modal-video undisplay">
@@ -580,7 +578,7 @@
                 Замовте безкоштовну консультацію з <br> питань придбання РРО
             </h3>
 
-            <button class="btn" id="consultBtn">Отримати консультацію</button>
+            <button class="btn" id="freeConsultBtn">Отримати консультацію</button>
         </div>
     </div>
 

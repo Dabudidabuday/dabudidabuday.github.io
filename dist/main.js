@@ -30,11 +30,12 @@ const overlay = document.getElementById('overlay');
 const modalPartners = document.querySelector('.modal__partners');
 const modalConsultation = document.querySelector('.modal__consultation');
 const modalBuy = document.querySelector('.modal__buy');
+const modalSuccess = document.getElementById('form-success');
 
 
 // MODAL OPEN BUTTONS
 const introBtn = document.querySelector('.btn--intro');
-const consultBtn = document.getElementById('consultBtn');
+const freeConsultBtn = document.getElementById('freeConsultBtn');
 const discountBtn = document.getElementById('discountBtn');
 
 
@@ -49,6 +50,7 @@ const footerPartnersBtn = document.getElementById('footer-btn--partners');
 
 const modalCloseBtn = document.querySelector('.modal__close');
 const closeBuyBtn = document.querySelector('.close-buy-btn');
+const closeSuccess = document.querySelector('.success__back-btn');
 
 
 
@@ -60,6 +62,15 @@ function modalOpen(button, form) {
         form.classList.add('modal__show');
     })
 };
+
+function modalOpenConsult(form) {
+    freeConsultBtn.addEventListener('click', function () {
+        overlay.classList.add('modal__show');
+        form.classList.add('modal__show');
+    })
+};
+
+
 
 function modalClose(form) {
     modalCloseBtn.addEventListener('click', function () {
@@ -88,8 +99,22 @@ function modalCloseBuy(form) {
     })
 };
 
+function modalCloseSuccess(form) {
+    closeSuccess.addEventListener('click', function () {
+        overlay.classList.remove('modal__show');
+        form.classList.remove('modal__show');
+    });
+
+    window.addEventListener('click', function() {
+        if(event.target == overlay) { 
+            overlay.classList.remove("modal__show");
+            form.classList.remove("modal__show");
+        }
+    })
+};
+
 modalOpen(introBtn, modalConsultation);
-modalOpen(consultBtn, modalConsultation);
+modalOpenConsult(modalConsultation);
 modalOpen(discountBtn, modalConsultation);
 modalOpen(productConsult1, modalConsultation);
 modalOpen(productConsult2, modalConsultation);
@@ -102,7 +127,7 @@ modalOpen(productbuy2, modalBuy);
 modalClose(modalPartners);
 modalClose(modalConsultation);
 modalCloseBuy(modalBuy);
-
+modalCloseSuccess(modalSuccess);
 
 /* 
 ** Header menu

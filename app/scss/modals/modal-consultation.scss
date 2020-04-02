@@ -78,7 +78,6 @@
 
 
 .modal__show {
-    top: 30px;
     display: block;
     visibility: visible !important;
     opacity: 1 !important;
@@ -98,4 +97,13 @@
     &:hover {
         transform: rotate(90deg);
     }
+}
+
+.title--sucess {
+    margin-bottom: 50px;
+}
+
+.subtitle--success {
+    margin-bottom: 50px;
+    font-size: 30px;
 }
