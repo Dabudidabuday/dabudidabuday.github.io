@@ -101,6 +101,11 @@
   cursor: pointer;
 }
 
+.tooltip:hover .tooltip-window{
+  visibility: visible;
+  transition: ease-in-out .3s;
+  opacity: 1;
+}
 
 .article__three-column {
   margin-top: 35px;
@@ -195,3 +200,29 @@
   color: #686868;
 }
 
+
+
+.tooltip-window {
+  position: absolute;
+  top: -350px;
+  left: 120px;
+  width: 320px;
+  padding: 14px 14px 15px 14px;
+  background-color: #fff;
+  font-size: 10px;
+  font-weight: 30;
+  color: #000;
+  line-height: 25px;
+  border: 1px solid #AABDC8;
+  border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  visibility: hidden;
+  transition: ease-in-out .3s;
+  opacity: 0;
+}
+
+.tooltip-header {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+}

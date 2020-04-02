@@ -1,6 +1,6 @@
 .modal {
     position: relative;
-    margin: 10vh auto;
+    margin: 5vh auto;
     max-width: 610px;
     width: 90%;
     text-align: center;
@@ -19,11 +19,11 @@
     }
 
     .subtitle {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .btn {
-        margin: 25px auto 0;
+        margin: 10px auto 0;
         max-width: 377px;
         width: 100%;
         text-transform: uppercase;
@@ -41,7 +41,7 @@
 
 .modal-container {
     position: relative;
-    padding: 40px 74px 63px;
+    padding: 40px 74px 40px;
 
     @media screen and(max-width: 477px) {
         padding: 40px 30px 63px;
@@ -49,7 +49,7 @@
 }
 
 .modal__label {
-    padding-left: 30px;
+    padding-left: 42px;
     text-align: left;
     display: inline-block;
 
@@ -102,7 +102,7 @@
 .title--sucess {
     margin-bottom: 50px;
 }
-
+ 
 .subtitle--success {
     margin-bottom: 50px;
     font-size: 30px;

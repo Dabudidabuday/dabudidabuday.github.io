@@ -778,6 +778,11 @@ a {
   right: -25px;
   cursor: pointer; }
 
+.tooltip:hover .tooltip-window {
+  visibility: visible;
+  transition: ease-in-out .3s;
+  opacity: 1; }
+
 .article__three-column {
   margin-top: 35px;
   display: flex;
@@ -837,6 +842,29 @@ a {
 .note {
   margin-bottom: 15px;
   color: #686868; }
+
+.tooltip-window {
+  position: absolute;
+  top: -350px;
+  left: 120px;
+  width: 320px;
+  padding: 14px 14px 15px 14px;
+  background-color: #fff;
+  font-size: 10px;
+  font-weight: 30;
+  color: #000;
+  line-height: 25px;
+  border: 1px solid #AABDC8;
+  border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  visibility: hidden;
+  transition: ease-in-out .3s;
+  opacity: 0; }
+
+.tooltip-header {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500; }
 
 .feedback {
   padding-top: 70px;
@@ -1189,7 +1217,7 @@ a {
 
 .modal {
   position: relative;
-  margin: 10vh auto;
+  margin: 5vh auto;
   max-width: 610px;
   width: 90%;
   text-align: center;
@@ -1204,9 +1232,9 @@ a {
   .modal .title {
     margin-bottom: 10px; }
   .modal .subtitle {
-    margin-bottom: 40px; }
+    margin-bottom: 30px; }
   .modal .btn {
-    margin: 25px auto 0;
+    margin: 10px auto 0;
     max-width: 377px;
     width: 100%;
     text-transform: uppercase;
@@ -1219,13 +1247,13 @@ a {
 
 .modal-container {
   position: relative;
-  padding: 40px 74px 63px; }
+  padding: 40px 74px 40px; }
   @media screen and (max-width: 477px) {
     .modal-container {
       padding: 40px 30px 63px; } }
 
 .modal__label {
-  padding-left: 30px;
+  padding-left: 42px;
   text-align: left;
   display: inline-block; }
   .modal__label sup {

@@ -23,6 +23,15 @@ $(document).ready(function () {
 
 // 'use strict';
 
+// FEEDBACK
+
+const feedbackBtn = document.getElementById('feedbackBtn');
+const formSuccess = document.getElementById('form-success');
+feedbackBtn.addEventListener('click', function() {
+    overlay.classList.add('modal__show');
+    formSuccess.classList.add('modal__show');
+})
+
 // OVERLAY
 const overlay = document.getElementById('overlay');
 
@@ -51,7 +60,7 @@ const footerPartnersBtn = document.getElementById('footer-btn--partners');
 const modalCloseBtn = document.querySelector('.modal__close');
 const closeBuyBtn = document.querySelector('.close-buy-btn');
 const closeSuccess = document.querySelector('.success__back-btn');
-
+const closePartners = document.getElementById('close-Partners');
 
 
 
@@ -113,6 +122,20 @@ function modalCloseSuccess(form) {
     })
 };
 
+function modalClosePartners(form) {
+    closePartners.addEventListener('click', function () {
+        overlay.classList.remove('modal__show');
+        form.classList.remove('modal__show');
+    });
+
+    window.addEventListener('click', function() {
+        if(event.target == overlay) { 
+            overlay.classList.remove("modal__show");
+            form.classList.remove("modal__show");
+        }
+    })
+};
+
 modalOpen(introBtn, modalConsultation);
 modalOpenConsult(modalConsultation);
 modalOpen(discountBtn, modalConsultation);
@@ -124,7 +147,7 @@ modalOpen(productbuy1, modalBuy);
 modalOpen(productbuy2, modalBuy);
 
 
-modalClose(modalPartners);
+modalClosePartners(modalPartners);
 modalClose(modalConsultation);
 modalCloseBuy(modalBuy);
 modalCloseSuccess(modalSuccess);

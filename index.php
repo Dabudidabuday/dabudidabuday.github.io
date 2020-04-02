@@ -24,7 +24,7 @@
                 </p>
     
                 <form action="/mail.php" class="modal__form flex-row-vertical" id="ajax_form">
-                    <input type="hidden" name="title" value="Консультация с главного экрана">
+                    <input type="hidden" name="title" value="Консультация">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
                         <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я">
@@ -56,26 +56,26 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="/mail.php" method="POST" class="modal__form flex-row-vertical" id="ajax_partners">
+                <form action="/mail.php" class="modal__form flex-row-vertical" id="ajax_partners">
                     <input type="hidden" name="title" value="Подвал - Стать партнером">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
-                        <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                        <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я">
                     </label>
     
                     <label class="modal__label">
                         Ваш телефон: <sup>*</sup>
-                        <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                        <input class="modal__input" name="phone" type="tel" placeholder="+38 099 999 99 99">
                     </label>
     
                     <label class="modal__label">
                         Назва компанії: <sup>*</sup>
-                        <input class="modal__input" type="tel" placeholder="Назва">
+                        <input class="modal__input" name="company" type="tel" placeholder="Назва">
                     </label>
     
                     <label class="modal__label">
                         Ваш e-mail:
-                        <input class="modal__input" type="email" placeholder="Ваш Email">
+                        <input class="modal__input" name="email" type="email" placeholder="Ваш Email">
                     </label>
     
                     <input class="btn" type="submit" value="Стати партнером">
@@ -94,25 +94,25 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="/mail.php" method="POST" class="modal__form flex-row-vertical" id="ajax_buy">
+                <form action="/mail.php" class="modal__form flex-row-vertical" id="ajax_buy">
                     <input type="hidden" name="title" value="РРО - купить">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
-                        <input class="modal__input" type="text" placeholder="Ваше ім’я">
+                        <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я">
                     </label>
     
                     <label class="modal__label">
                         Ваш телефон: <sup>*</sup>
-                        <input class="modal__input" type="tel" placeholder="+38 099 999 99 99">
+                        <input class="modal__input" name="phone" type="tel" placeholder="+38 099 999 99 99">
                     </label>
     
                     <label class="modal__label">
                         Ваш e-mail:
-                        <input class="modal__input" type="email" placeholder="Ваш Email">
+                        <input class="modal__input" name="email" type="email" placeholder="Ваш Email">
                     </label>
     
                     <input class="btn" type="submit" value="Вiдправити">
-                </form>
+                </form> 
             </div>
             <button class="modal__close close-buy-btn">
                 <img src="assets/icons/close.png" alt="">
@@ -166,12 +166,12 @@
             </nav>
 
             <div class="header__utility">
-                <div class="header__utility--lang">
+                <!-- <div class="header__utility--lang">
                     <div class="header__utility-lang-img">
                         <img src="assets/icons/lang.svg" alt="" class="icon">
                     </div>
                     <p class="lang">РУС</p>
-                </div>
+                </div> -->
 
                 <div class="header__utility--phone">
                     <a href="tel:+38044-228-74-83"><img src="assets/icons/phone.svg" alt="" class="icon"></a>
@@ -431,19 +431,29 @@
         <div class="container">
             <div class="title--little">
                 <h5 class="title-tooltip">
-                    До реєстраторів розрахункових операцій <span class="tooltip">відносяться:</span>
-                </h5>
-                <!-- <div class="tooltip-window">
-                    <div class="tooltip-inner">
-                        <p class="tooltip-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, laboriosam nobis ratione
-                            voluptate nemo quia accusantium perferendis autem fuga mollitia.
-                        </p>
-                    </div>
-                </div> -->
+                    До реєстраторів розрахункових операцій 
+                    <span class="tooltip">
+                        відносяться:
+                        <div class="tooltip-window">
+                            <h5 class="tooltip-header">Нові дати</h5>
+                            <p class="tooltip-text">
+                                до 01 серпня 2020 року відтерміновано впровадження застосування
+                                програмних РРО; <br>
+                                ⁃ до 01 січня 2021 року відтерміновано застосування РРО та/або програмних
+                                РРО для окремих видів діяльності; <br>
+                                ⁃ до 01 квітня 2021 року відтерміновано запровадження обов’язкового
+                                використання РРО та/або програмних РРО для всіх платників єдиного податку
+                                другої – четвертої групи; <br>
+                                ⁃ до 01 січня 2021 року відтерміновано застосування санкцій, визначених п. 1 ст.
+                                17 Закону про РРО за порушення порядку проведення розрахункових
+                                операцій.
+
+                                <a href="https://zakon.rada.gov.ua/laws/show/128-20#n6" class="about__more">посилання на джерело</a>
+                            </p>
+                        </div>
+                    </span>
+                </h5> 
             </div>
-
-
         </div>
 
         <div class="flex-container">
@@ -870,25 +880,26 @@
 
     <section class="feedback">
         <div class="container">
-            <form action="#" method="POST" class="feedback__form" id="ajax_form">
+            <form action="/mail.php" class="feedback__form" id="ajax_feedback">
+                <input type="hidden" name="title" value="Форма обратной связи">
                 <legend class="title feedback__form-title">Зв'яжіться з нами</legend>
                 <p class="feedback__form-subtitle">
                     Будь ласка, заповніть форму нижче та отримайте безкоштовну консультацію
                 </p>
 
                 <label>
-                    <input type="text" class="form__input" placeholder="Ваше ім’я">
+                    <input type="text" name="name" class="form__input" placeholder="Ваше ім’я" required>
                 </label>
 
                 <label>
-                    <input type="tel" class="form__input" placeholder="Ваш телефон">
+                    <input type="tel" name="phone" class="form__input" placeholder="Ваш телефон" required>
                 </label>
 
                 <label>
-                    <input type="email" class="form__input" placeholder="Ваш e-mail">
+                    <input type="email" name="email" class="form__input" placeholder="Ваш e-mail" required>
                 </label>
 
-                <button class="btn form__submit" id="feedbackBtn">Надіслати</button>
+                <input class="btn form__submit" id="feedbackBtn" value="Надiслати">
             </form>
         </div>
     </section>

@@ -51,9 +51,9 @@ $msg .= date('F j, Y, G:i:s');
 
 
 $mailTo = '94mir.ms@gmail.com';
-$mailFrom = 'noreply@test.com';
+$mailFrom = 'test@test.com';
 
-mail_utf8($mailTo, $mailFrom, $_POST['formtitle'], $msg);
+mail_utf8($mailTo, $mailFrom, $_POST['title'], $msg);
 
 echo $msg;
 
