@@ -263,7 +263,7 @@ a {
   cursor: pointer;
   transition: ease-in-out .2s; }
   .btn:hover, .btn:focus {
-    box-shadow: inset -20.5em 0 0 0 #39cdff, inset 20.5em 0 0 0 #39cdff; }
+    box-shadow: inset -20.5em 0 0 0 #39cdff, inset 20.5em 0 0 0 #39cdff; }
 
 .btn--lighten {
   font-size: 14px;
@@ -860,6 +860,9 @@ a {
   visibility: hidden;
   transition: ease-in-out .3s;
   opacity: 0; }
+  @media screen and (max-width: 800px) {
+    .tooltip-window {
+      left: 36px; } }
 
 .tooltip-header {
   font-size: 14px;

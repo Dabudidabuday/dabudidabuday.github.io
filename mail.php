@@ -14,9 +14,7 @@ function mail_utf8($to, $from, $subject, $message)
 $msg = '';
 
 if (isset($_POST['title'])) {
-	$msg .= '<b>';
 	$msg .= $_POST['title'];
-	$msg .= '</b>';
 	$msg .= "\r\n";
 }
 
@@ -50,8 +48,8 @@ $msg .= 'Date: ';
 $msg .= date('F j, Y, G:i:s');
 
 
-$mailTo = '94mir.ms@gmail.com';
-$mailFrom = 'test@test.com';
+$mailTo = 'rro@fnt.com.ua';
+$mailFrom = 'rro@fnt.com.ua';
 
 mail_utf8($mailTo, $mailFrom, $_POST['title'], $msg);
 

@@ -765,8 +765,6 @@
                         сучасний...
                     </p>
 
-                    <a href="" class="more">Читати більше</a>
-
                     <p class="product__who">
                         Для кого:
                     </p>
@@ -888,7 +886,7 @@
                 </p>
 
                 <label>
-                    <input type="text" name="name" class="form__input" placeholder="Ваше ім’я" required>
+                    <input type="text" name="name" class="form__input" placeholder="Ваше ім’я" id="input-name" required>
                 </label>
 
                 <label>
@@ -899,7 +897,7 @@
                     <input type="email" name="email" class="form__input" placeholder="Ваш e-mail" required>
                 </label>
 
-                <input class="btn form__submit" id="feedbackBtn" value="Надiслати">
+                <button class="btn form__submit" id="feedbackBtn">Надiслати</button>
             </form>
         </div>
     </section>
