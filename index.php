@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="assets/images/header-logo.png" property="og:image">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app/libraries/animate.css">
     <link rel="stylesheet" type="text/css" href="app/libraries/slick.css" />
     <link rel="stylesheet" type="text/css" href="app/libraries/slick-theme.css" />
     <link rel="stylesheet" href="dist/main.css">
-    <title>Document</title>
+    <title>Касове обладнання</title>
 </head>
 
 <body>
@@ -215,7 +216,7 @@
                     2020-2021 рр.
                 </p>
 
-                <a href="https://zakon.rada.gov.ua/laws/show/128-20#n6" class="about__more">посилання на джерело</a>
+                <a href="https://zakon.rada.gov.ua/laws/show/128-20#n6" target="_blank" class="about__more">посилання на джерело</a>
             </div>
 
             <div class="about__background wow rotateInUpLeft" data-wow-duration="1s">
@@ -314,7 +315,26 @@
 
             <article class="article wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
                 <ul class="article-wrapper">
-                    <h5 class="article-title">З 1 Жовтня</h5>
+                    <h5 class="article-title">З 1 Жовтня<span class="tooltip">
+                        2020 р.
+                        <div class="tooltip-window">
+                            <h5 class="tooltip-header">Нові дати</h5>
+                            <p class="tooltip-text">
+                                до 01 серпня 2020 року відтерміновано впровадження застосування
+                                програмних РРО; <br>
+                                ⁃ до 01 січня 2021 року відтерміновано застосування РРО та/або програмних
+                                РРО для окремих видів діяльності; <br>
+                                ⁃ до 01 квітня 2021 року відтерміновано запровадження обов’язкового
+                                використання РРО та/або програмних РРО для всіх платників єдиного податку
+                                другої – четвертої групи; <br>
+                                ⁃ до 01 січня 2021 року відтерміновано застосування санкцій, визначених п. 1 ст.
+                                17 Закону про РРО за порушення порядку проведення розрахункових
+                                операцій.
+
+                                <a href="https://zakon.rada.gov.ua/laws/show/128-20#n6" target="_blank" class="about__more">посилання на джерело</a>
+                            </p>
+                        </div>
+                    </span></h5>
 
                     <div class="article-subtitle">
                         Платники єдиного податку, ФОП другої - четвертої груп з 19 квітня 2020 р. мають можливість
@@ -431,27 +451,7 @@
         <div class="container">
             <div class="title--little">
                 <h5 class="title-tooltip">
-                    До реєстраторів розрахункових операцій 
-                    <span class="tooltip">
-                        відносяться:
-                        <div class="tooltip-window">
-                            <h5 class="tooltip-header">Нові дати</h5>
-                            <p class="tooltip-text">
-                                до 01 серпня 2020 року відтерміновано впровадження застосування
-                                програмних РРО; <br>
-                                ⁃ до 01 січня 2021 року відтерміновано застосування РРО та/або програмних
-                                РРО для окремих видів діяльності; <br>
-                                ⁃ до 01 квітня 2021 року відтерміновано запровадження обов’язкового
-                                використання РРО та/або програмних РРО для всіх платників єдиного податку
-                                другої – четвертої групи; <br>
-                                ⁃ до 01 січня 2021 року відтерміновано застосування санкцій, визначених п. 1 ст.
-                                17 Закону про РРО за порушення порядку проведення розрахункових
-                                операцій.
-
-                                <a href="https://zakon.rada.gov.ua/laws/show/128-20#n6" class="about__more">посилання на джерело</a>
-                            </p>
-                        </div>
-                    </span>
+                    До реєстраторів розрахункових операцій вiдносяться:
                 </h5> 
             </div>
         </div>
@@ -597,14 +597,14 @@
             <article class="article article--discount">
                 <div class="article-wrapper">
                     <h5 class="title">Акція!!!</h5>
-                    <h5 class="title">Найкраще рішення для курьерської доставки</h5>
+                    <h5 class="title">Найкраще рішення для кур'єрської доставки</h5>
 
                     <p class="discount__subtitle">
                         до 30 квітня 2020 р.
                     </p>
 
                     <p class="discount__description">
-                        ми привеземо вам аппарат <span class="strong"> Мікро ХМ. (WiFi або GPRS) </span> , повністю
+                        ми привеземо вам апарат <span class="strong"> Мікро ХМ. (WiFi або GPRS) </span> , повністю
                         готовий до
                         роботи, зареєстрований
                         та введений в
@@ -717,7 +717,7 @@
                         фіскальних операцій у
                         торгових точках різноманітного призначення. Модель Мікро ХМ має відмінні експлуатаційні
                         властивості, невеликий розмір та
-                        сучасний...
+                        сучасний дизайн.
                     </p>
 
                     <p class="product__who">
@@ -762,7 +762,7 @@
                         фіскальних операцій у
                         торгових точках різноманітного призначення. Модель Мікро ХМ має відмінні експлуатаційні
                         властивості, невеликий розмір та
-                        сучасний...
+                        сучасний дизайн.
                     </p>
 
                     <p class="product__who">

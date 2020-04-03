@@ -27,8 +27,8 @@ $(document).ready(function () {
 
 const feedbackBtn = document.getElementById('feedbackBtn');
 const formSuccess = document.getElementById('form-success');
-feedbackBtn.addEventListener('click', function() {
-    
+feedbackBtn.addEventListener('click', function () {
+
     overlay.classList.add('modal__show');
     formSuccess.classList.add('modal__show');
 })
@@ -88,8 +88,8 @@ function modalClose(form) {
         form.classList.remove('modal__show');
     });
 
-    window.addEventListener('click', function() {
-        if(event.target == overlay) { 
+    window.addEventListener('click', function () {
+        if (event.target == overlay) {
             overlay.classList.remove("modal__show");
             form.classList.remove("modal__show");
         }
@@ -101,8 +101,8 @@ function modalCloseBuy(form) {
         form.classList.remove('modal__show');
     });
 
-    window.addEventListener('click', function() {
-        if(event.target == overlay) { 
+    window.addEventListener('click', function () {
+        if (event.target == overlay) {
             overlay.classList.remove("modal__show");
             form.classList.remove("modal__show");
         }
@@ -115,8 +115,8 @@ function modalCloseSuccess(form) {
         form.classList.remove('modal__show');
     });
 
-    window.addEventListener('click', function() {
-        if(event.target == overlay) { 
+    window.addEventListener('click', function () {
+        if (event.target == overlay) {
             overlay.classList.remove("modal__show");
             form.classList.remove("modal__show");
         }
@@ -129,8 +129,8 @@ function modalClosePartners(form) {
         form.classList.remove('modal__show');
     });
 
-    window.addEventListener('click', function() {
-        if(event.target == overlay) { 
+    window.addEventListener('click', function () {
+        if (event.target == overlay) {
             overlay.classList.remove("modal__show");
             form.classList.remove("modal__show");
         }
@@ -170,16 +170,16 @@ $(".header__nav-list li a").on("click", function () {
     $(".header__nav").removeClass('show');
     $(".header__burger").removeClass('show');
     // $(".header__nav").removeClass('show');
- 
+
 });
 
 
 
-$(document).ready(function(){
-    $("a[href*=#]").on("click", function(e){
+$(document).ready(function () {
+    $("a[href*=#]").on("click", function (e) {
         var anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top-=60
+            scrollTop: $(anchor.attr('href')).offset().top -= 60
         }, 500);
         e.preventDefault();
         return false;
@@ -187,16 +187,16 @@ $(document).ready(function(){
 });
 
 
-(function($) {
-    $(function() {
-    
-        $('#up').click(function() {
-            $('html, body').animate({scrollTop: 0},500);
+(function ($) {
+    $(function () {
+
+        $('#up').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 500);
             return false;
         })
-    
+
     })
-    })(jQuery)
+})(jQuery)
 
 
 

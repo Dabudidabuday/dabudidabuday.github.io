@@ -23,6 +23,16 @@ $(document).ready(function () {
 
 // 'use strict';
 
+// FEEDBACK
+
+const feedbackBtn = document.getElementById('feedbackBtn');
+const formSuccess = document.getElementById('form-success');
+feedbackBtn.addEventListener('click', function () {
+
+    overlay.classList.add('modal__show');
+    formSuccess.classList.add('modal__show');
+})
+
 // OVERLAY
 const overlay = document.getElementById('overlay');
 
@@ -30,11 +40,12 @@ const overlay = document.getElementById('overlay');
 const modalPartners = document.querySelector('.modal__partners');
 const modalConsultation = document.querySelector('.modal__consultation');
 const modalBuy = document.querySelector('.modal__buy');
+const modalSuccess = document.getElementById('form-success');
 
 
 // MODAL OPEN BUTTONS
 const introBtn = document.querySelector('.btn--intro');
-const consultBtn = document.getElementById('consultBtn');
+const freeConsultBtn = document.getElementById('freeConsultBtn');
 const discountBtn = document.getElementById('discountBtn');
 
 
@@ -49,7 +60,8 @@ const footerPartnersBtn = document.getElementById('footer-btn--partners');
 
 const modalCloseBtn = document.querySelector('.modal__close');
 const closeBuyBtn = document.querySelector('.close-buy-btn');
-
+const closeSuccess = document.querySelector('.success__back-btn');
+const closePartners = document.getElementById('close-Partners');
 
 
 
@@ -61,14 +73,23 @@ function modalOpen(button, form) {
     })
 };
 
+function modalOpenConsult(form) {
+    freeConsultBtn.addEventListener('click', function () {
+        overlay.classList.add('modal__show');
+        form.classList.add('modal__show');
+    })
+};
+
+
+
 function modalClose(form) {
     modalCloseBtn.addEventListener('click', function () {
         overlay.classList.remove('modal__show');
         form.classList.remove('modal__show');
     });
 
-    window.addEventListener('click', function() {
-        if(event.target == overlay) { 
+    window.addEventListener('click', function () {
+        if (event.target == overlay) {
             overlay.classList.remove("modal__show");
             form.classList.remove("modal__show");
         }
@@ -80,8 +101,36 @@ function modalCloseBuy(form) {
         form.classList.remove('modal__show');
     });
 
-    window.addEventListener('click', function() {
-        if(event.target == overlay) { 
+    window.addEventListener('click', function () {
+        if (event.target == overlay) {
+            overlay.classList.remove("modal__show");
+            form.classList.remove("modal__show");
+        }
+    })
+};
+
+function modalCloseSuccess(form) {
+    closeSuccess.addEventListener('click', function () {
+        overlay.classList.remove('modal__show');
+        form.classList.remove('modal__show');
+    });
+
+    window.addEventListener('click', function () {
+        if (event.target == overlay) {
+            overlay.classList.remove("modal__show");
+            form.classList.remove("modal__show");
+        }
+    })
+};
+
+function modalClosePartners(form) {
+    closePartners.addEventListener('click', function () {
+        overlay.classList.remove('modal__show');
+        form.classList.remove('modal__show');
+    });
+
+    window.addEventListener('click', function () {
+        if (event.target == overlay) {
             overlay.classList.remove("modal__show");
             form.classList.remove("modal__show");
         }
@@ -89,7 +138,7 @@ function modalCloseBuy(form) {
 };
 
 modalOpen(introBtn, modalConsultation);
-modalOpen(consultBtn, modalConsultation);
+modalOpenConsult(modalConsultation);
 modalOpen(discountBtn, modalConsultation);
 modalOpen(productConsult1, modalConsultation);
 modalOpen(productConsult2, modalConsultation);
@@ -99,10 +148,10 @@ modalOpen(productbuy1, modalBuy);
 modalOpen(productbuy2, modalBuy);
 
 
-modalClose(modalPartners);
+modalClosePartners(modalPartners);
 modalClose(modalConsultation);
 modalCloseBuy(modalBuy);
-
+modalCloseSuccess(modalSuccess);
 
 /* 
 ** Header menu
@@ -121,16 +170,16 @@ $(".header__nav-list li a").on("click", function () {
     $(".header__nav").removeClass('show');
     $(".header__burger").removeClass('show');
     // $(".header__nav").removeClass('show');
- 
+
 });
 
 
 
-$(document).ready(function(){
-    $("a[href*=#]").on("click", function(e){
+$(document).ready(function () {
+    $("a[href*=#]").on("click", function (e) {
         var anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top-=60
+            scrollTop: $(anchor.attr('href')).offset().top -= 60
         }, 500);
         e.preventDefault();
         return false;
@@ -138,16 +187,16 @@ $(document).ready(function(){
 });
 
 
-(function($) {
-    $(function() {
-    
-        $('#up').click(function() {
-            $('html, body').animate({scrollTop: 0},500);
+(function ($) {
+    $(function () {
+
+        $('#up').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 500);
             return false;
         })
-    
+
     })
-    })(jQuery)
+})(jQuery)
 
 
 

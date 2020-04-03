@@ -845,8 +845,8 @@ a {
 
 .tooltip-window {
   position: absolute;
-  top: -350px;
-  left: 120px;
+  top: -345px;
+  left: 108px;
   width: 320px;
   padding: 14px 14px 15px 14px;
   background-color: #fff;
@@ -860,9 +860,23 @@ a {
   visibility: hidden;
   transition: ease-in-out .3s;
   opacity: 0; }
+  @media screen and (max-width: 900px) {
+    .tooltip-window {
+      border-bottom-left-radius: 8px;
+      top: -350px;
+      left: 50px; } }
   @media screen and (max-width: 800px) {
     .tooltip-window {
       left: 36px; } }
+  @media screen and (max-width: 750px) {
+    .tooltip-window {
+      left: 0; } }
+  @media screen and (max-width: 700px) {
+    .tooltip-window {
+      left: -70px; } }
+  @media screen and (max-width: 545px) {
+    .tooltip-window {
+      left: -160px; } }
 
 .tooltip-header {
   font-size: 14px;
