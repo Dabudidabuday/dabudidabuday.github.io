@@ -28,12 +28,12 @@
                     <input type="hidden" name="title" value="Консультация">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
-                        <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я">
+                        <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я" required>
                     </label>
     
                     <label class="modal__label">
                         Ваш телефон: <sup>*</sup>
-                        <input class="modal__input" name="phone" type="tel" placeholder="+38 099 999 99 99">
+                        <input class="modal__input" name="phone" type="tel" placeholder="+38 099 999 99 99" required>
                     </label>
     
                     <label class="modal__label">
@@ -61,17 +61,17 @@
                     <input type="hidden" name="title" value="Подвал - Стать партнером">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
-                        <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я">
+                        <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я" required>
                     </label>
     
                     <label class="modal__label">
                         Ваш телефон: <sup>*</sup>
-                        <input class="modal__input" name="phone" type="tel" placeholder="+38 099 999 99 99">
+                        <input class="modal__input" name="phone" type="tel" placeholder="+38 099 999 99 99" required>
                     </label>
     
                     <label class="modal__label">
                         Назва компанії: <sup>*</sup>
-                        <input class="modal__input" name="company" type="tel" placeholder="Назва">
+                        <input class="modal__input" name="company" type="tel" placeholder="Назва" required>
                     </label>
     
                     <label class="modal__label">
@@ -99,12 +99,12 @@
                     <input type="hidden" name="title" value="РРО - купить">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
-                        <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я">
+                        <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я" required>
                     </label>
     
                     <label class="modal__label">
                         Ваш телефон: <sup>*</sup>
-                        <input class="modal__input" name="phone" type="tel" placeholder="+38 099 999 99 99">
+                        <input class="modal__input" name="phone" type="tel" placeholder="+38 099 999 99 99" required>
                     </label>
     
                     <label class="modal__label">
@@ -894,7 +894,7 @@
                 </label>
 
                 <label>
-                    <input type="email" name="email" class="form__input" placeholder="Ваш e-mail" required>
+                    <input type="email" name="email" class="form__input" placeholder="Ваш e-mail">
                 </label>
 
                 <button class="btn form__submit" id="feedbackBtn">Надiслати</button>
@@ -933,14 +933,11 @@
         </div>
     </footer>
 
-
-    
-
-    <!-- <button id="up"><img src="assets/icons/arrows/arrow-up.png" alt=""></button> -->
-
-    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/localization/messages_ru.min.js"></script>
     <script type="text/javascript" src="app/js/slick/slick.min.js"></script>
     <script src="app/js/wow.min.js"></script>
     <script src="ajax.js"></script>

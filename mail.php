@@ -48,7 +48,7 @@ $msg .= 'Date: ';
 $msg .= date('F j, Y, G:i:s');
 
 
-$mailTo = 'rro@fnt.com.ua';
+$mailTo = '94mir.ms@gmail.com';
 $mailFrom = 'rro@fnt.com.ua';
 
 mail_utf8($mailTo, $mailFrom, $_POST['title'], $msg);
