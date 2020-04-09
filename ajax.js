@@ -160,7 +160,8 @@ $("#ajax_feedback").validate({
 	  $(form).ajaxSubmit({
 		success: function(data) {
 			$(form).trigger('reset');
-			$('.modal').removeClass('modal__show');
+			$('#overlay').addClass('modal__show');
+
 			$('#form-success').addClass('modal__show');
 	  }});
 	}

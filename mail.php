@@ -1,3 +1,8 @@
+
+
+
+
+
 <?php
 
 function mail_utf8($to, $from, $subject, $message)
@@ -14,6 +19,7 @@ function mail_utf8($to, $from, $subject, $message)
 $msg = '';
 
 if (isset($_POST['title'])) {
+	$msg .= 'Form: ';
 	$msg .= $_POST['title'];
 	$msg .= "\r\n";
 }
@@ -37,8 +43,8 @@ if (isset($_POST['email'])) {
 }
 
 if (isset($_POST['company'])) {
-	$msg .= 'Email: ';
-	$msg .= $_POST['email'];
+	$msg .= 'Company: ';
+	$msg .= $_POST['company'];
 	$msg .= "\r\n";
 }
 
@@ -48,7 +54,7 @@ $msg .= 'Date: ';
 $msg .= date('F j, Y, G:i:s');
 
 
-$mailTo = '94mir.ms@gmail.com';
+$mailTo = 'rro@fnt.com.ua';
 $mailFrom = 'rro@fnt.com.ua';
 
 mail_utf8($mailTo, $mailFrom, $_POST['title'], $msg);
@@ -56,3 +62,4 @@ mail_utf8($mailTo, $mailFrom, $_POST['title'], $msg);
 echo $msg;
 
 ?>
+

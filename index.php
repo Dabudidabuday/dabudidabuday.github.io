@@ -24,7 +24,7 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="/mail.php" class="modal__form flex-row-vertical" id="ajax_form">
+                <form action="/mail.php" method="post" class="modal__form flex-row-vertical" id="ajax_form">
                     <input type="hidden" name="title" value="Консультация">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
@@ -57,7 +57,7 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="/mail.php" class="modal__form flex-row-vertical" id="ajax_partners">
+                <form action="/mail.php" method="post" class="modal__form flex-row-vertical" id="ajax_partners">
                     <input type="hidden" name="title" value="Подвал - Стать партнером">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
@@ -95,7 +95,7 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="/mail.php" class="modal__form flex-row-vertical" id="ajax_buy">
+                <form action="/mail.php" method="post" class="modal__form flex-row-vertical" id="ajax_buy">
                     <input type="hidden" name="title" value="РРО - купить">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
