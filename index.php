@@ -25,7 +25,7 @@
                 </p>
     
                 <form action="/mail.php" class="modal__form flex-row-vertical" id="ajax_form">
-                    <input type="hidden" name="title" value="Консультация">
+                    <input type="hidden" name="title">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
                         <input class="modal__input" name="name" type="text" placeholder="Ваше ім’я" required>
@@ -190,7 +190,7 @@
         <div class="intro__text">
             <h1 class="title intro__title">Касове обладнання</h1>
             <p class="intro__subtitle">для всіх платників єдиного податку ІІ – IV груп</p>
-            <button class="btn btn--intro">Безкоштовна консультація</button>
+            <button class="btn btn--intro" onclick="contactForm('Интро - Консультация', '.modal__consultation')">Безкоштовна консультація</button>
 
             <button class="play"><img class="triangle" src="assets/icons/triangle.svg" alt=""></button>
         </div>
@@ -588,7 +588,7 @@
                 Замовте безкоштовну консультацію з <br> питань придбання РРО
             </h3>
 
-            <button class="btn" id="freeConsultBtn">Отримати консультацію</button>
+            <button class="btn" onclick="contactForm('Замовте безкоштовну консультацію', '.modal__consultation')">Отримати консультацію</button>
         </div>
     </div>
 
@@ -617,7 +617,7 @@
                         * Пропозиція дійсна за умови заключення сервісного контракту.
                     </p>
 
-                    <button class="btn" id="discountBtn">Замовити</button>
+                    <button class="btn" onclick="contactForm('Акция', '.modal__consultation')">Замовити</button>
                 </div>
             </article>
         </div>
@@ -744,8 +744,8 @@
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn--lighten" id="productConsult--1">Замовити консультацію</button>
-                        <button class="btn" id="buy1">Купити</button>
+                        <button class="btn--lighten" onclick="contactForm('Обладнання - Консультацiя - Wi-Fi', '.modal__consultation')">Замовити консультацію</button>
+                        <button class="btn"  onclick="contactForm('Обладнання - Купити - Wi-Fi', '.modal__buy')">Купити</button>
                     </div>
 
                 </div>
@@ -754,7 +754,7 @@
             <div class="product__card" id="product__card-2">
                 <div class="product__card-description mr-36">
                     <div class="product-title">
-                        Мікро ХМ. з WiFi
+                        Мікро ХМ. з GPRS
                     </div>
 
                     <p class="product__description">
@@ -789,8 +789,8 @@
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn--lighten" id="productConsult--2">Замовити консультацію</button>
-                        <button class="btn" id="buy2">Купити</button>
+                        <button class="btn--lighten"  onclick="contactForm('Обладнання - Консультацiя - GPRS', '.modal__consultation')">Замовити консультацію</button>
+                        <button class="btn"  onclick="contactForm('Обладнання - Купити - GPRS', '.modal__buy')">Купити</button>
                     </div>
 
                 </div>
@@ -874,7 +874,7 @@
             </div>
         </div>
     </section>
-
+    
 
     <section class="feedback">
         <div class="container">
@@ -924,7 +924,7 @@
                 </div>
 
                 <p class="work-our"><span class="strong">Години роботи:</span> пн - пт 9:00 - 18:00</p>
-                <button class="btn--lighten"  id="footer-btn--partners">Стати партнером</button>
+                <button class="btn--lighten"  class="btn" onclick="contactForm('Подвал - Стать партнером', '.modal__partners')">Стати партнером</button>
             </div>
 
             <div class="footer-logo">

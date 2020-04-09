@@ -66,19 +66,19 @@ const closePartners = document.getElementById('close-Partners');
 
 
 
-function modalOpen(button, form) {
-    button.addEventListener('click', function () {
-        overlay.classList.add('modal__show');
-        form.classList.add('modal__show');
-    })
-};
+// function modalOpen(button, form) {
+//     button.addEventListener('click', function () {
+//         overlay.classList.add('modal__show');
+//         form.classList.add('modal__show');
+//     })
+// };
 
-function modalOpenConsult(form) {
-    freeConsultBtn.addEventListener('click', function () {
-        overlay.classList.add('modal__show');
-        form.classList.add('modal__show');
-    })
-};
+// function modalOpenConsult(form) {
+//     freeConsultBtn.addEventListener('click', function () {
+//         overlay.classList.add('modal__show');
+//         form.classList.add('modal__show');
+//     })
+// };
 
 
 
@@ -137,15 +137,15 @@ function modalClosePartners(form) {
     })
 };
 
-modalOpen(introBtn, modalConsultation);
-modalOpenConsult(modalConsultation);
-modalOpen(discountBtn, modalConsultation);
-modalOpen(productConsult1, modalConsultation);
-modalOpen(productConsult2, modalConsultation);
-modalOpen(footerPartnersBtn, modalPartners);
+// modalOpen(introBtn, modalConsultation);
+// modalOpenConsult(modalConsultation);
+// modalOpen(discountBtn, modalConsultation);
+// modalOpen(productConsult1, modalConsultation);
+// modalOpen(productConsult2, modalConsultation);
+// modalOpen(footerPartnersBtn, modalPartners);
 
-modalOpen(productbuy1, modalBuy);
-modalOpen(productbuy2, modalBuy);
+// modalOpen(productbuy1, modalBuy);
+// modalOpen(productbuy2, modalBuy);
 
 
 modalClosePartners(modalPartners);
@@ -206,10 +206,12 @@ $(document).ready(function () {
 
 
 
+function contactForm (title, modal) {
+    $('#overlay').addClass('modal__show');
 
-
-
-
+    $(modal).addClass('modal__show')
+    .find('input[name="title"]').val(title);
+}
 
 
 
