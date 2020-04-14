@@ -3,6 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163244026-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163244026-1');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="assets/images/header-logo.png" property="og:image">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700,900&display=swap" rel="stylesheet">
@@ -24,7 +32,7 @@
                     Будь ласка, заповніть форму
                 </p>
     
-                <form action="/mail.php" class="modal__form flex-row-vertical" id="ajax_form">
+                <form action="/mail.php" method="post" class="modal__form flex-row-vertical" id="ajax_form">
                     <input type="hidden" name="title">
                     <label class="modal__label">
                         Ваше ім’я: <sup>*</sup>
@@ -878,7 +886,7 @@
 
     <section class="feedback">
         <div class="container">
-            <form action="/mail.php" class="feedback__form" id="ajax_feedback">
+            <form action="/mail.php" method="post" class="feedback__form" id="ajax_feedback">
                 <input type="hidden" name="title" value="Форма обратной связи">
                 <legend class="title feedback__form-title">Зв'яжіться з нами</legend>
                 <p class="feedback__form-subtitle">
@@ -897,7 +905,7 @@
                     <input type="email" name="email" class="form__input" placeholder="Ваш e-mail">
                 </label>
 
-                <button class="btn form__submit" id="feedbackBtn">Надiслати</button>
+                <button class="btn form__submit" onclick="contactForm('Форма обратной связи', '.modal__success')">Надiслати</button>
             </form>
         </div>
     </section>
