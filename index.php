@@ -5,11 +5,20 @@
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163244026-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-163244026-1');
+        gtag('config', 'UA-163244026-1');
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-163244026-1', 'auto');
+        ga('send', 'pageview');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="assets/images/header-logo.png" property="og:image">
@@ -748,7 +757,7 @@
                     </ul>
 
                     <div class="product__price">
-                        <span class="price-title">Цiна: </span> <span class="price-cost">4 950 грн</span>
+                        <span class="price-title">Цiна: </span> <span class="price-cost">4 800 грн</span>
                     </div>
 
                     <div class="btn-container">
@@ -793,7 +802,7 @@
                     </ul>
 
                     <div class="product__price">
-                        <span class="price-title">Цiна: </span> <span class="price-cost">4 800 грн</span>
+                        <span class="price-title">Цiна: </span> <span class="price-cost">4 950 грн</span>
                     </div>
 
                     <div class="btn-container">
