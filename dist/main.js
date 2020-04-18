@@ -45,6 +45,14 @@ const modalSuccess = document.getElementById('form-success');
 
 // MODAL OPEN BUTTONS
 const introBtn = document.querySelector('.btn--intro');
+const btnFreeConsult = document.querySelector('.btn-consult--free');
+const btnConsultDiscount = document.querySelector('.btn-consult--discount');
+const btnConsultWifi = document.querySelector('.btn-consult--wifi');
+const btnBuyWifi = document.querySelector('.btn-buy--wifi');
+const btnConsultGprs = document.querySelector('.btn-consult--gprs');
+const btnBuyGprs = document.querySelector('.btn-buy--gprs');
+const btnFeedbackSend = document.querySelector('.form__submit');
+const btnPartners = document.querySelector('.btn-partners');
 const freeConsultBtn = document.getElementById('freeConsultBtn');
 const discountBtn = document.getElementById('discountBtn');
 
@@ -63,24 +71,41 @@ const closeBuyBtn = document.querySelector('.close-buy-btn');
 const closeSuccess = document.querySelector('.success__back-btn');
 const closePartners = document.getElementById('close-Partners');
 
+introBtn.addEventListener('click', function() {
+    ga('send', 'event', 'form', 'open', 'Консультация', 'Интро - консультация');
+});
 
+btnFreeConsult.addEventListener('click', function() {
+    ga('send', 'event', 'form', 'open', 'Консультация', 'Открыть - бесплатная консультация');
+});
 
+btnConsultDiscount.addEventListener('click', function() {
+    ga('send', 'event', 'form', 'open', 'Консультация', 'Открыть - Акция - консультация');
+});
 
-// function modalOpen(button, form) {
-//     button.addEventListener('click', function () {
-//         overlay.classList.add('modal__show');
-//         form.classList.add('modal__show');
-//     })
-// };
+btnConsultWifi.addEventListener('click', function() {
+    ga('send', 'event', 'form', 'open', 'Консультация', 'Открыть - Консультация - с Wi-Fi');
+});
 
-// function modalOpenConsult(form) {
-//     freeConsultBtn.addEventListener('click', function () {
-//         overlay.classList.add('modal__show');
-//         form.classList.add('modal__show');
-//     })
-// };
+btnBuyWifi.addEventListener('click', function() {
+    ga('send', 'event', 'form', 'open', 'Купить', 'Открыть - Купить - с Wi-Fi');
+});
 
+btnConsultGprs.addEventListener('click', function() {
+    ga('send', 'event', 'form', 'open', 'Консультация', 'Открыть - Консультация - с GPRS');
+});
 
+btnBuyGprs.addEventListener('click', function() {
+    ga('send', 'event', 'form', 'open', 'Купить', 'Открыть - Купить - с GPRS');
+});
+
+btnFeedbackSend.addEventListener('click', function() {
+    ga('send', 'event', 'form', 'send', 'Обратная связь', 'Отправить форму обратной связи');
+});
+
+btnPartners.addEventListener('click', function() {
+    ga('send', 'event', 'form', 'open', 'Партнеры', 'Открыть - Форма - Партнеры');
+})
 
 function modalClose(form) {
     modalCloseBtn.addEventListener('click', function () {

@@ -58,7 +58,7 @@
                         <input class="modal__input" name="email" type="email" placeholder="Ваш Email">
                     </label>
     
-                    <input class="btn" type="submit" value="Надіслати заявку" id="consultBtn">
+                    <input class="btn" type="submit" value="Надіслати заявку" id="consultBtn" onclick="ga('send', 'event', 'form', 'send', 'Консультация', 'Отправить форму')">
                 </form>
             </div>
             <button class="modal__close">
@@ -96,7 +96,7 @@
                         <input class="modal__input" name="email" type="email" placeholder="Ваш Email">
                     </label>
     
-                    <input class="btn" type="submit" value="Стати партнером">
+                    <input class="btn" type="submit" value="Стати партнером" onclick="ga('send', 'event', 'form', 'send', 'Партнеры', 'Отправить форму - Стать партнером')">
                 </form>
             </div>
             <button class="modal__close" id="close-Partners">
@@ -129,7 +129,7 @@
                         <input class="modal__input" name="email" type="email" placeholder="Ваш Email">
                     </label>
     
-                    <input class="btn" type="submit" value="Вiдправити">
+                    <input class="btn" type="submit" value="Вiдправити" onclick="ga('send', 'event', 'form', 'send', 'Купить', 'отправка формы - Купить РРО')">
                 </form> 
             </div>
             <button class="modal__close close-buy-btn">
@@ -192,7 +192,7 @@
                 </div> -->
 
                 <div class="header__utility--phone">
-                    <a href="tel:+38044-228-74-83"><img src="assets/icons/phone.svg" alt="" class="icon"></a>
+                    <a href="tel:+38044-228-74-83" onclick="ga('send', 'event', 'call', 'open', 'Позвонить', 'Кнопка-телефон')"><img src="assets/icons/phone.svg" alt="" class="icon"></a>
                 </div>
             </div>
 
@@ -605,7 +605,7 @@
                 Замовте безкоштовну консультацію з <br> питань придбання РРО
             </h3>
 
-            <button class="btn" onclick="contactForm('Замовте безкоштовну консультацію', '.modal__consultation')">Отримати консультацію</button>
+            <button class="btn btn-consult--free" onclick="contactForm('Замовте безкоштовну консультацію', '.modal__consultation')">Отримати консультацію</button>
         </div>
     </div>
 
@@ -634,7 +634,7 @@
                         * Пропозиція дійсна за умови заключення сервісного контракту.
                     </p>
 
-                    <button class="btn" onclick="contactForm('Акция', '.modal__consultation')">Замовити</button>
+                    <button class="btn btn-consult--discount" onclick="contactForm('Акция', '.modal__consultation')">Замовити</button>
                 </div>
             </article>
         </div>
@@ -761,8 +761,8 @@
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn--lighten" onclick="contactForm('Обладнання - Консультацiя - Wi-Fi', '.modal__consultation')">Замовити консультацію</button>
-                        <button class="btn"  onclick="contactForm('Обладнання - Купити - Wi-Fi', '.modal__buy')">Купити</button>
+                        <button class="btn--lighten btn-consult--wifi" onclick="contactForm('Обладнання - Консультацiя - Wi-Fi', '.modal__consultation')">Замовити консультацію</button>
+                        <button class="btn btn-buy--wifi" onclick="contactForm('Обладнання - Купити - Wi-Fi', '.modal__buy')">Купити</button>
                     </div>
 
                 </div>
@@ -806,8 +806,8 @@
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn--lighten"  onclick="contactForm('Обладнання - Консультацiя - GPRS', '.modal__consultation')">Замовити консультацію</button>
-                        <button class="btn"  onclick="contactForm('Обладнання - Купити - GPRS', '.modal__buy')">Купити</button>
+                        <button class="btn--lighten btn-consult--gprs" onclick="contactForm('Обладнання - Консультацiя - GPRS', '.modal__consultation')">Замовити консультацію</button>
+                        <button class="btn btn-buy--gprs" onclick="contactForm('Обладнання - Купити - GPRS', '.modal__buy')">Купити</button>
                     </div>
 
                 </div>
@@ -941,7 +941,7 @@
                 </div>
 
                 <p class="work-our"><span class="strong">Години роботи:</span> пн - пт 9:00 - 18:00</p>
-                <button class="btn--lighten"  class="btn" onclick="contactForm('Подвал - Стать партнером', '.modal__partners')">Стати партнером</button>
+                <button class="btn--lighten btn-partners"  class="btn" onclick="contactForm('Подвал - Стать партнером', '.modal__partners')">Стати партнером</button>
             </div>
 
             <div class="footer-logo">
